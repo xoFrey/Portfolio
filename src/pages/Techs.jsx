@@ -1,16 +1,35 @@
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber";
 import { Ghost } from "../components/Ghost";
 import "./Techs.css";
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import {
+  OrbitControls,
+  PerspectiveCamera,
+  ScrollControls,
+  useScroll,
+  useTexture,
+} from "@react-three/drei";
 import { useRef, useEffect, useState } from "react";
 import { Sausage } from "../components/Sausage";
+import * as THREE from "three";
 
 const Techs = () => {
+  const texture = useLoader(THREE.TextureLoader, "/3D/mercury.jpg");
+  const normals = useLoader(THREE.TextureLoader, "/3D/normal.png");
   return (
     <section className='techs'>
       <Canvas>
-        <Scene />
-        <Sausage />
+        <ScrollControls damping={0.3}>
+          <Scene />
+          <mesh>
+            <sphereGeometry args={[5, 24, 24]} />
+            <meshStandardMaterial
+              normalMap={normals}
+              map={texture}
+              displacementScale={0.2}
+            />
+          </mesh>
+          <Sausage />
+        </ScrollControls>
       </Canvas>
     </section>
   );
@@ -18,47 +37,35 @@ const Techs = () => {
 
 const Scene = () => {
   const { camera } = useThree();
-  const [targetPosition, setTargetPosition] = useState({ x: 0, y: 1, z: 4 });
-
-  console.log(camera.position);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      setTargetPosition({
-        x: scrollY * 0.6,
-        y: 1 + scrollY * 0.5, // Slight upward movement
-        z: 4 + scrollY * 0.1, // Moves back on scroll
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const scroll = useScroll();
 
   useFrame(() => {
-    // Smoothly interpolate the camera position
-    camera.position.x += (targetPosition.x - camera.position.x) * 0.1;
-    camera.position.y += (targetPosition.y - camera.position.y) * 0.1;
-    camera.position.z += (targetPosition.z - camera.position.z) * 0.1;
-    camera.lookAt(0, 0, 0); // Keeps the camera focused on the scene
+    const scrollY = scroll.offset;
+    camera.position.x = scrollY * 15;
+    camera.position.y = 1 + scrollY * 5;
+    camera.position.z = 4 + scrollY * 5;
+    camera.lookAt(0, 0, 0);
   });
 
   return (
     <>
-      {/* <OrbitControls /> */}
-      <ambientLight intensity={1.5} />
+      <color
+        args={[0, 0, 0]}
+        attach='background'
+      />
+      <ambientLight intensity={1} />
+      <spotLight
+        intensity={5}
+        position={[9, 5, 9]}
+      />
       <spotLight
         intensity={100}
         distance={10}
         position={[1, 3, 7]}
       />
       <gridHelper />
+      {/* <OrbitControls /> */}
       <Ghost />
-      <PerspectiveCamera
-        position={[0, 1, 4]}
-        fov={90}
-      />
     </>
   );
 };

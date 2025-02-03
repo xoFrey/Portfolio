@@ -11,7 +11,8 @@ export function Sausage(props) {
   return (
     <group
       {...props}
-      position={[7, 7, 4]}
+      position={[5, 5, 9]}
+      rotation={[0, 1.7, -0.12]}
       dispose={null}>
       <mesh
         geometry={nodes.body.geometry}

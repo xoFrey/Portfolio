@@ -15,7 +15,8 @@ export function Ghost(props) {
     <group
       scale={2}
       ref={ref}
-      position={[0, 0.3, 0]}
+      position={[-2, 0.3, 0]}
+      rotation={[0, 0.4, 0]}
       {...props}
       dispose={null}>
       <mesh
