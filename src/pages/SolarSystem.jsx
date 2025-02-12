@@ -89,52 +89,54 @@ const SolarSystem = () => {
         attach='background'
       /> */}
       <ambientLight intensity={4} />
-      <OrbitControls />
-      <mesh position={[0, 0, 0]}>
-        <sphereGeometry args={[2, 500, 500]} />
-        <meshStandardMaterial
-          map={suntexture}
-          side={THREE.DoubleSide}
-        />
-      </mesh>
-      {planetRefs.current.map((ref, index) => (
-        <mesh
-          key={index}
-          ref={ref}>
-          <sphereGeometry args={[1, 500, 500]} />
+      {/* <OrbitControls /> */}
+      <group position={[28, 10, 7]}>
+        <mesh position={[0, 0, 0]}>
+          <sphereGeometry args={[2, 500, 500]} />
           <meshStandardMaterial
-            map={planetTextures[index]}
+            map={suntexture}
             side={THREE.DoubleSide}
           />
-          {index === 5 && (
-            <mesh rotation={[Math.PI / 2, 0, 0]}>
-              <ringGeometry args={[1.2, 2, 64]} />
-              <meshStandardMaterial
-                map={saturnringtexture}
-                side={THREE.DoubleSide}
-              />
-            </mesh>
-          )}
-          {index === 6 && (
-            <mesh rotation={[Math.PI / 2, 0, 0]}>
-              <ringGeometry args={[1.2, 2, 64]} />
-              <meshStandardMaterial
-                map={uranusringtexture}
-                side={THREE.DoubleSide}
-                transparent
-              />
-            </mesh>
-          )}
         </mesh>
-      ))}
-      {trails.map((points, index) => (
-        <Line
-          key={index}
-          points={points}
-          color='grey'
-          lineWidth={0.6}
-        />
-      ))}
+        {planetRefs.current.map((ref, index) => (
+          <mesh
+            key={index}
+            ref={ref}>
+            <sphereGeometry args={[1, 500, 500]} />
+            <meshStandardMaterial
+              map={planetTextures[index]}
+              side={THREE.DoubleSide}
+            />
+            {index === 5 && (
+              <mesh rotation={[Math.PI / 2, 0, 0]}>
+                <ringGeometry args={[1.2, 2, 64]} />
+                <meshStandardMaterial
+                  map={saturnringtexture}
+                  side={THREE.DoubleSide}
+                />
+              </mesh>
+            )}
+            {index === 6 && (
+              <mesh rotation={[Math.PI / 2, 0, 0]}>
+                <ringGeometry args={[1.2, 2, 64]} />
+                <meshStandardMaterial
+                  map={uranusringtexture}
+                  side={THREE.DoubleSide}
+                  transparent
+                />
+              </mesh>
+            )}
+          </mesh>
+        ))}
+        {trails.map((points, index) => (
+          <Line
+            key={index}
+            points={points}
+            color='grey'
+            lineWidth={0.6}
+          />
+        ))}
+      </group>
       {/* <EffectComposer>
         <Bloom
           luminanceThreshold={0}

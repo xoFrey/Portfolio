@@ -11,27 +11,29 @@ import {
 import { useRef, useEffect, useState } from "react";
 import { Sausage } from "../components/Sausage";
 import * as THREE from "three";
+import SolarSystem from "./SolarSystem";
 
 const Techs = () => {
   const texture = useLoader(THREE.TextureLoader, "/3D/mercury.jpg");
   const normals = useLoader(THREE.TextureLoader, "/3D/normal.png");
   return (
-    <section className='techs'>
-      <Canvas>
-        <ScrollControls damping={0.3}>
-          <Scene />
-          <mesh position={[5, 2, 2]}>
-            <sphereGeometry args={[5, 600, 600]} />
-            <meshStandardMaterial
-              normalMap={normals}
-              map={texture}
-              displacementScale={0.2}
-            />
-          </mesh>
-          <Sausage />
-        </ScrollControls>
-      </Canvas>
-    </section>
+    // <section className='techs'>
+    //   <Canvas>
+    <ScrollControls damping={0.3}>
+      <Scene />
+      {/* <mesh position={[5, 2, 2]}>
+        <sphereGeometry args={[5, 600, 600]} />
+        <meshStandardMaterial
+          normalMap={normals}
+          map={texture}
+          displacementScale={0.2}
+        />
+      </mesh> */}
+      <Sausage />
+      <SolarSystem />
+    </ScrollControls>
+    //   </Canvas>
+    // </section>
   );
 };
 
@@ -41,18 +43,18 @@ const Scene = () => {
 
   useFrame(() => {
     const scrollY = scroll.offset;
-    camera.position.x = scrollY * 15;
-    camera.position.y = 1 + scrollY * 5;
-    camera.position.z = 4 + scrollY * 5;
+    camera.position.x = scrollY * 50;
+    camera.position.y = 1 + scrollY * 15;
+    camera.position.z = 4 + scrollY * 10;
     camera.lookAt(0, 0, 0);
   });
 
   return (
     <>
-      <color
+      {/* <color
         args={[0, 0, 0]}
         attach='background'
-      />
+      /> */}
       <ambientLight intensity={1} />
       <spotLight
         intensity={5}

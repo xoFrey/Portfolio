@@ -5,3 +5,7 @@ canvas {
 ::-webkit-scrollbar {
   display: none;
 }
+
+.techs {
+  z-index: -1;
+}

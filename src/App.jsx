@@ -26,8 +26,8 @@ function App() {
       ) : (
         <>
           <Canvas camera={{ fov: 70, position: [3, 10, 39] }}>
-            {/* <Techs /> */}
-            <SolarSystem />
+            {/* <SolarSystem /> */}
+            <Techs />
           </Canvas>
         </>
       )}
