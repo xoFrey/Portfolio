@@ -20,8 +20,8 @@ const Techs = () => {
       <Canvas>
         <ScrollControls damping={0.3}>
           <Scene />
-          <mesh>
-            <sphereGeometry args={[5, 24, 24]} />
+          <mesh position={[5, 2, 2]}>
+            <sphereGeometry args={[5, 600, 600]} />
             <meshStandardMaterial
               normalMap={normals}
               map={texture}

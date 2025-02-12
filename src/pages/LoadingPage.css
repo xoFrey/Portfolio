@@ -1,0 +1,30 @@
+.loading {
+  /* background-color: black; */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg path {
+  fill: transparent;
+  stroke: rgba(82, 216, 187, 0.747);
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: textanimation 4s ease-in-out 1 forwards;
+}
+
+@keyframes textanimation {
+  0% {
+    stroke-dashoffset: 500;
+  }
+  90% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgba(82, 216, 187, 0.747);
+    stroke-dashoffset: 0;
+  }
+}
