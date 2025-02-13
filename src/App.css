@@ -5,3 +5,12 @@
   background-color: black;
   z-index: -1;
 }
+
+.canvas {
+  height: 100vh;
+}
+
+.earthcanvas {
+  height: 100vh;
+  position: relative;
+}

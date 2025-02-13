@@ -1,10 +1,18 @@
-import { PointMaterial, Points } from "@react-three/drei";
+import {
+  OrbitControls,
+  PerspectiveCamera,
+  PointMaterial,
+  Points,
+} from "@react-three/drei";
 import { useMemo, useRef } from "react";
 import * as random from "maath/random/dist/maath-random.esm";
-import { useFrame } from "@react-three/fiber";
+import { useFrame, useThree } from "@react-three/fiber";
 
 const Stars = (props) => {
+  const { camera } = useThree();
   const starRef = useRef();
+
+  console.log(camera.position);
 
   const sphere = useMemo(
     () => random.inSphere(new Float32Array(2000 * 3), { radius: 1.2 }),
@@ -31,6 +39,8 @@ const Stars = (props) => {
           depthWrite={false}
         />
       </Points>
+      <PerspectiveCamera position={[0, 5, 0.5]} />
+      <OrbitControls />
     </group>
   );
 };
