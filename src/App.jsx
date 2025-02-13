@@ -20,14 +20,16 @@ function App() {
     <>
       <div className='stars'>
         <Canvas camera={{ fov: 75, position: [0, 0, 1] }}>
-          <Stars />
+          <ScrollControls damping={0.3}>
+            <Stars />
+          </ScrollControls>
         </Canvas>
       </div>
       <div className='earthcanvas'>
         <Canvas
           // orthographic
           camera={{ fov: 30, position: [0, 0, 0] }}>
-          {/* <EarthCard /> */}
+          <EarthCard />
           <ScrollControls damping={0.3}>
             <EarthPage />
           </ScrollControls>

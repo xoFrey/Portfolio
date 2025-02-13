@@ -39,7 +39,7 @@ const Stars = (props) => {
           depthWrite={false}
         />
       </Points>
-      <PerspectiveCamera position={[0, 5, 0.5]} />
+      <PerspectiveCamera position={[0, 0, 0.5]} />
       <OrbitControls />
     </group>
   );
