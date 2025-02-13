@@ -7,6 +7,7 @@ import { useState } from "react";
 import Earth from "./components/Earth/Earth";
 import EarthCard from "./components/Earth/EarthCard";
 import { ScrollControls } from "@react-three/drei";
+import EarthPage from "./pages/EarthPage";
 // import LoadingPage from "./pages/LoadingPage";
 
 function App() {
@@ -27,8 +28,7 @@ function App() {
           // orthographic
           camera={{ fov: 30, position: [0, 0, 0] }}>
           <ScrollControls damping={0.3}>
-            <Earth />
-            <EarthCard />
+            <EarthPage />
           </ScrollControls>
         </Canvas>
       </div>
