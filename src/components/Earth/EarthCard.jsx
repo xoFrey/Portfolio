@@ -1,12 +1,10 @@
 import { Html } from "@react-three/drei";
 import "./EarthCard.css";
 
-const EarthCard = ({ ref }) => {
+const EarthCard = () => {
   return (
-    <Html position={[6, 7, -60]}>
-      <section
-        className='earthcard'
-        ref={ref}>
+    <Html position={[0, 0, 0]}>
+      <section className='earthcard'>
         <div className='card'>
           <h1>HALLOOOOOOOOO</h1>
           <p>

@@ -16,3 +16,7 @@ p {
   -webkit-backdrop-filter: blur(1px);
   /* border: 1px solid rgba(255, 255, 255, 0.3); */
 }
+
+.earthcard {
+  margin-top: -20vh;
+}

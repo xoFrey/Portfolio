@@ -27,6 +27,7 @@ function App() {
         <Canvas
           // orthographic
           camera={{ fov: 30, position: [0, 0, 0] }}>
+          {/* <EarthCard /> */}
           <ScrollControls damping={0.3}>
             <EarthPage />
           </ScrollControls>
