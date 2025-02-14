@@ -7,7 +7,8 @@ const Mars = () => {
   const marsTexture = useLoader(THREE.TextureLoader, "/3D/mars.jpg");
 
   useFrame(() => {
-    marsRef.current.rotation.y += 0.002;
+    marsRef.current.rotation.y += 0.001;
+    marsRef.current.rotation.x += 0.001;
   });
   return (
     <>
