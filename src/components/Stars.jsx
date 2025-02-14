@@ -3,28 +3,29 @@ import {
   PerspectiveCamera,
   PointMaterial,
   Points,
+  useScroll,
 } from "@react-three/drei";
 import { useMemo, useRef } from "react";
 import * as random from "maath/random/dist/maath-random.esm";
 import { useFrame, useThree } from "@react-three/fiber";
 
-const Stars = (props) => {
-  const { camera } = useThree();
+const Stars = ({ scrollRef, ...props }) => {
   const starRef = useRef();
 
-  console.log(camera.position);
-
   const sphere = useMemo(
-    () => random.inSphere(new Float32Array(2000 * 3), { radius: 1.2 }),
+    () => random.inSphere(new Float32Array(5000 * 5), { radius: 10 }),
     [],
   );
 
   useFrame(() => {
-    starRef.current.rotation.z -= 0.0001;
+    starRef.current.rotation.x -= 0.0001;
   });
 
   return (
-    <group rotation={[0, 0, Math.PI / 4]}>
+    <group
+      rotation={[0, 0, Math.PI / 4]}
+      position={[0, 0, 0]}>
+      {/* <OrbitControls /> */}
       <Points
         ref={starRef}
         positions={sphere}
@@ -34,13 +35,16 @@ const Stars = (props) => {
         <PointMaterial
           transparent
           color='#f272c8'
-          size={0.002}
+          size={0.003}
           sizeAttenuation={true}
           depthWrite={false}
+          depthTest={true}
+          stencilWrite={true}
+          stencilRef={1}
+          stencilFunc={516}
         />
+        <PerspectiveCamera position={[0, 0, 0]} />
       </Points>
-      <PerspectiveCamera position={[0, 0, 0.5]} />
-      <OrbitControls />
     </group>
   );
 };

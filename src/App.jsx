@@ -3,35 +3,30 @@ import "./App.css";
 // import SolarSystem from "./pages/SolarSystem";
 // import Techs from "./pages/Techs";
 import Stars from "./components/Stars";
-import { useState } from "react";
-import Earth from "./components/Earth/Earth";
+import { useRef, useState } from "react";
 import EarthCard from "./components/Earth/EarthCard";
 import { ScrollControls } from "@react-three/drei";
 import EarthPage from "./pages/EarthPage";
+import Mars from "./components/Mars/Mars";
 // import LoadingPage from "./pages/LoadingPage";
 
 function App() {
   const [showLoading, setShowLoading] = useState(false);
+
   setTimeout(() => {
     setShowLoading(false);
   }, 6000);
 
   return (
     <>
-      <div className='stars'>
-        <Canvas camera={{ fov: 75, position: [0, 0, 1] }}>
-          <ScrollControls damping={0.3}>
-            <Stars />
-          </ScrollControls>
-        </Canvas>
-      </div>
-      <div className='earthcanvas'>
+      <div className='scene'>
         <Canvas
-          // orthographic
-          camera={{ fov: 30, position: [0, 0, 0] }}>
-          <EarthCard />
-          <ScrollControls damping={0.3}>
+          camera={{ fov: 70, position: [0, 0, 15] }}
+          gl={{ stencil: true }}>
+          <ScrollControls>
+            <Stars />
             <EarthPage />
+            <Mars />
           </ScrollControls>
         </Canvas>
       </div>

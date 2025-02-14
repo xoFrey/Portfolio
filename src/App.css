@@ -2,8 +2,8 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: black;
-  z-index: -1;
+  /* background-color: black; */
+  z-index: 1;
 }
 
 .canvas {
@@ -12,8 +12,18 @@
 
 .earthcanvas {
   height: 100vh;
+  position: fixed;
+  width: 100vw;
+  /* z-index: 2; */
 }
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+.scene {
+  height: 100vh;
+}
+html {
+  background-color: black;
 }

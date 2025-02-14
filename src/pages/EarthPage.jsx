@@ -7,18 +7,22 @@ import { useRef, useState } from "react";
 const EarthPage = () => {
   const { camera } = useThree();
   const scroll = useScroll();
+  const earthRef = useRef();
 
   useFrame(() => {
     const scrollY = scroll.offset;
-    camera.position.x = -scrollY * 40;
-    camera.position.y = -scrollY * 200;
-    camera.position.z = 4 + scrollY * 300;
-    camera.lookAt(0, 0, 0);
+
+    camera.position.z = 2 - scrollY * 2;
+    camera.position.x = scrollY * 1;
+    camera.position.y = scrollY * 3;
+    camera.rotation.y = (scrollY * Math.PI) / 3;
+    earthRef.current.position.z = -scrollY * 5;
+    // earthRef.current.position.x = -1 + scrollY * 6;
   });
 
   return (
     <>
-      <Earth />
+      <Earth earthRef={earthRef} />
     </>
   );
 };
