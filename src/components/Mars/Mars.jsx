@@ -14,7 +14,7 @@ const Mars = () => {
     <>
       <mesh
         ref={marsRef}
-        position={[15, 0, 0]}>
+        position={[0.0, -60, -10.0]}>
         <sphereGeometry args={[0.53, 100, 100]} />
         <meshBasicMaterial
           map={marsTexture}

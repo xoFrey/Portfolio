@@ -1,9 +1,11 @@
 import { OrbitControls } from "@react-three/drei";
 import { useFrame, useLoader, useThree } from "@react-three/fiber";
+import { useRef } from "react";
 import * as THREE from "three";
 
-const Earth = ({ earthRef }) => {
+const Earth = () => {
   const earthTexture = useLoader(THREE.TextureLoader, "/3D/earth.jpg");
+  const earthRef = useRef();
 
   useFrame(() => {
     if (earthRef.current) {
@@ -14,7 +16,7 @@ const Earth = ({ earthRef }) => {
     <>
       <mesh
         ref={earthRef}
-        position={[20, 0, 0]}>
+        position={[-10.0, -40, 0.0]}>
         <sphereGeometry args={[1, 100, 100]} />
         <meshBasicMaterial
           map={earthTexture}

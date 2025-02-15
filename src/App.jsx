@@ -15,6 +15,7 @@ import Venus from "./components/Venus/Venus";
 import Uranus from "./components/Uranus/Uranus";
 import Neptune from "./components/Neptune/Neptune";
 import Sun from "./components/Sun/Sun";
+import Earth from "./components/Earth/Earth";
 // import LoadingPage from "./pages/LoadingPage";
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
             <Stars />
             <Mercury />
             <Venus />
+            {/* <Earth /> */}
             <EarthPage />
             <Mars />
             <Jupiter />

@@ -18,7 +18,7 @@ const Saturn = () => {
   });
   return (
     <group
-      position={[-35, 0, 0]}
+      position={[0.0, -100, 10.0]}
       ref={saturnRef}>
       <mesh position={[0, 0, 0]}>
         <sphereGeometry args={[9.45, 100, 100]} />
@@ -35,6 +35,7 @@ const Saturn = () => {
         <ambientLight />
         <ringGeometry args={[10.4, 22, 128]} />
         <meshStandardMaterial
+          transparent
           map={saturnringtexture}
           side={THREE.DoubleSide}
         />

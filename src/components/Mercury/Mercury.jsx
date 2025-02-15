@@ -14,7 +14,7 @@ const Mercury = () => {
     <>
       <mesh
         ref={mercuryRef}
-        position={[30, 0, 0]}>
+        position={[10.0, 0, 0.0]}>
         <sphereGeometry args={[0.38, 100, 100]} />
         <meshBasicMaterial
           map={mercuryTexture}

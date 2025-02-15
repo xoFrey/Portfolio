@@ -14,7 +14,7 @@ const Neptune = () => {
     <>
       <mesh
         ref={neptuneRef}
-        position={[-85, 0, 0]}>
+        position={[0.0, -140, -10.0]}>
         <sphereGeometry args={[3.88, 100, 100]} />
         <meshBasicMaterial
           map={neptuneTexture}

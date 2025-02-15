@@ -14,7 +14,7 @@ const Jupiter = () => {
     <>
       <mesh
         ref={jupiterRef}
-        position={[0, 0, 0]}>
+        position={[10.0, -80, 0.0]}>
         <sphereGeometry args={[11.21, 100, 100]} />
         <meshBasicMaterial
           map={jupiterTexture}

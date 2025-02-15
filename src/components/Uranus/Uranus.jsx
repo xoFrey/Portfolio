@@ -17,7 +17,7 @@ const Uranus = () => {
   });
   return (
     <group
-      position={[-70, 0, 0]}
+      position={[-10.0, -120, 0.0]}
       ref={uranusRef}>
       <mesh position={[0, 0, 0]}>
         <sphereGeometry args={[4.01, 100, 100]} />

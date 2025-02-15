@@ -35,7 +35,7 @@ const Stars = ({ scrollRef, ...props }) => {
         <PointMaterial
           transparent
           color='#f272c8'
-          size={0.003}
+          size={0.002}
           sizeAttenuation={true}
           depthWrite={false}
           depthTest={true}
