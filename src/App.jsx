@@ -3,11 +3,18 @@ import "./App.css";
 // import SolarSystem from "./pages/SolarSystem";
 // import Techs from "./pages/Techs";
 import Stars from "./components/Stars";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import EarthCard from "./components/Earth/EarthCard";
-import { ScrollControls } from "@react-three/drei";
+import { OrbitControls, ScrollControls } from "@react-three/drei";
 import EarthPage from "./pages/EarthPage";
 import Mars from "./components/Mars/Mars";
+import Jupiter from "./components/Jupiter/Jupiter";
+import Saturn from "./components/Saturn/Saturn";
+import Mercury from "./components/Mercury/Mercury";
+import Venus from "./components/Venus/Venus";
+import Uranus from "./components/Uranus/Uranus";
+import Neptune from "./components/Neptune/Neptune";
+import Sun from "./components/Sun/Sun";
 // import LoadingPage from "./pages/LoadingPage";
 
 function App() {
@@ -21,13 +28,26 @@ function App() {
     <>
       <div className='scene'>
         <Canvas
-          camera={{ fov: 70, position: [0, 0, 15] }}
+          camera={{
+            fov: 75,
+            position: [0, 50, 150],
+            up: [0, 1, 0],
+            aspect: window.innerWidth / window.innerHeight,
+          }}
           gl={{ stencil: true }}>
           <ScrollControls>
             <Stars />
+            <Mercury />
+            <Venus />
             <EarthPage />
             <Mars />
+            <Jupiter />
+            <Saturn />
+            <Uranus />
+            <Neptune />
           </ScrollControls>
+          <gridHelper />
+          <OrbitControls />
         </Canvas>
       </div>
     </>

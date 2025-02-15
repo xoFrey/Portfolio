@@ -2,22 +2,22 @@ import { useFrame, useLoader } from "@react-three/fiber";
 import { useRef } from "react";
 import * as THREE from "three";
 
-const Mars = () => {
-  const marsRef = useRef();
-  const marsTexture = useLoader(THREE.TextureLoader, "/3D/mars.jpg");
+const Mercury = () => {
+  const mercuryRef = useRef();
+  const mercuryTexture = useLoader(THREE.TextureLoader, "/3D/mercury.jpg");
 
   useFrame(() => {
-    marsRef.current.rotation.y += 0.001;
-    marsRef.current.rotation.x += 0.001;
+    mercuryRef.current.rotation.y += 0.001;
+    mercuryRef.current.rotation.x += 0.001;
   });
   return (
     <>
       <mesh
-        ref={marsRef}
-        position={[15, 0, 0]}>
-        <sphereGeometry args={[0.53, 100, 100]} />
+        ref={mercuryRef}
+        position={[30, 0, 0]}>
+        <sphereGeometry args={[0.38, 100, 100]} />
         <meshBasicMaterial
-          map={marsTexture}
+          map={mercuryTexture}
           side={THREE.DoubleSide}
           stencilWrite={true}
           stencilRef={1}
@@ -29,4 +29,4 @@ const Mars = () => {
   );
 };
 
-export default Mars;
+export default Mercury;

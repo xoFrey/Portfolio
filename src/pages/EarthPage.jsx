@@ -12,17 +12,18 @@ const EarthPage = () => {
   useFrame(() => {
     const scrollY = scroll.offset;
 
-    camera.position.z = 2 - scrollY * 2;
-    camera.position.x = scrollY * 1;
-    camera.position.y = scrollY * 3;
-    camera.rotation.y = (scrollY * Math.PI) / 3;
-    earthRef.current.position.z = -scrollY * 5;
+    // camera.position.z = 2.5 - scrollY * 3;
+    // camera.position.x = scrollY * 3;
+    // camera.position.y = -3 + scrollY * 20;
+    // camera.rotation.y = (scrollY * Math.PI) / 3;
+    // earthRef.current.position.z = -scrollY * 5;
     // earthRef.current.position.x = -1 + scrollY * 6;
   });
 
   return (
     <>
       <Earth earthRef={earthRef} />
+      {/* <EarthCard /> */}
     </>
   );
 };

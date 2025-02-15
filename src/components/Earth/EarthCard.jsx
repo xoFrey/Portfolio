@@ -1,28 +1,21 @@
 import { Html } from "@react-three/drei";
 import "./EarthCard.css";
+import { a } from "@react-spring/three";
 
 const EarthCard = () => {
   return (
-    <Html position={[0, 0, 0]}>
-      <section className='earthcard'>
+    <a.mesh position={[3, 0, 0]}>
+      <planeGeometry args={[1.5, 1]} />
+      <meshStandardMaterial />
+      <Html
+        transform
+        position={[0, 0, 0.1]}>
         <div className='card'>
-          <h1>HALLOOOOOOOOO</h1>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi sed
-            ullam nesciunt expedita quae reprehenderit voluptatum omnis
-            veritatis deserunt velit.
-          </p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Accusantium sequi impedit minima ipsa quasi corporis. Obcaecati id
-            alias omnis reprehenderit provident numquam dolor libero nihil
-            voluptas molestiae totam cumque enim, atque iusto, fugiat ratione
-            quis consequatur earum rerum voluptates debitis nisi! Neque expedita
-            ipsa quo corporis earum quas officiis minus?
-          </p>
+          <h3>Info Card</h3>
+          <p>Drag me around!</p>
         </div>
-      </section>
-    </Html>
+      </Html>
+    </a.mesh>
   );
 };
 
