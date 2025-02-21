@@ -1,12 +1,8 @@
 .card {
-  padding: 20px;
-  overflow: hidden;
-  background: linear-gradient(
-    to bottom right,
-    rgba(220, 231, 255, 0.2),
-    rgba(125, 110, 253, 0.3)
-  );
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  z-index: -1;
+  position: relative;
+  border-radius: 8px;
+  padding: 10px;
+  color: white;
+  background-color: rgba(78, 78, 78, 0.432);
+  transform: scale(2);
 }

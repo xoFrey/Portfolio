@@ -5,7 +5,14 @@ import "./App.css";
 import Stars from "./components/Stars";
 import { useEffect, useRef, useState } from "react";
 import EarthCard from "./components/Earth/EarthCard";
-import { OrbitControls, ScrollControls } from "@react-three/drei";
+import {
+  OrbitControls,
+  PerspectiveCamera,
+  ScrollControls,
+  Text3D,
+  useHelper,
+} from "@react-three/drei";
+import { CameraHelper as ThreeCameraHelper } from "three";
 import EarthPage from "./pages/EarthPage";
 import Mars from "./components/Mars/Mars";
 import Jupiter from "./components/Jupiter/Jupiter";
@@ -16,6 +23,8 @@ import Uranus from "./components/Uranus/Uranus";
 import Neptune from "./components/Neptune/Neptune";
 import Sun from "./components/Sun/Sun";
 import Earth from "./components/Earth/Earth";
+import Camera from "./pages/Camera";
+import { Rocket } from "./components/Rocket";
 // import LoadingPage from "./pages/LoadingPage";
 
 function App() {
@@ -30,8 +39,9 @@ function App() {
       <div className='scene'>
         <Canvas
           camera={{
-            fov: 75,
-            position: [0, 50, 150],
+            fov: 100,
+            position: [0, 1, 3],
+            // rotation: [1, Math.PI / 1, 0],
             up: [0, 1, 0],
             aspect: window.innerWidth / window.innerHeight,
           }}
@@ -39,17 +49,21 @@ function App() {
           <ScrollControls>
             <Stars />
             <Mercury />
-            <Venus />
+            {/* <Venus /> */}
+            <Camera />
+            {/* <Rocket /> */}
             {/* <Earth /> */}
-            <EarthPage />
-            <Mars />
-            <Jupiter />
-            <Saturn />
-            <Uranus />
-            <Neptune />
+            {/* <EarthPage /> */}
+            <EarthCard />
+            {/* <Mars /> */}
+            {/* <Jupiter /> */}
+            {/* <Saturn /> */}
+            {/* <Uranus /> */}
+            {/* <Neptune  */}
           </ScrollControls>
+          <axesHelper args={[50]} />
           <gridHelper />
-          <OrbitControls />
+          {/* <OrbitControls makeDefault /> */}
         </Canvas>
       </div>
     </>

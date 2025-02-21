@@ -8,9 +8,9 @@ const EarthPage = () => {
   const { camera } = useThree();
   const scroll = useScroll();
 
-  useEffect(() => {
-    console.log(camera.position);
-  }, [camera.position, scroll]);
+  // useEffect(() => {
+  //   console.log(camera.position);
+  // }, [camera.position, scroll]);
 
   useFrame(() => {
     // const scrollY = scroll.offset;
