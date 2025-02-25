@@ -19,7 +19,7 @@ const EarthCard = () => {
       ref={cardRef}
       transparent
       visible={false}
-      position={[-1, 0, -1]}
+      position={[0, 0, -3]}
       rotation={[-0.3, 0, 0]}>
       <Html
         scale={0.2}

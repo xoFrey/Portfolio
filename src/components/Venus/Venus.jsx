@@ -20,22 +20,22 @@ const Venus = () => {
 
   return (
     <>
-      <TransformControls mode='translate'>
-        <mesh
-          ref={venusRef}
-          position={[-1, 1, 2]}>
-          {/* <sphereGeometry args={[0.95, 100, 100]} /> */}
-          <sphereGeometry args={[0.1, 100, 100]} />
-          <meshBasicMaterial
-            map={venusTexture}
-            side={THREE.DoubleSide}
-            stencilWrite={true}
-            stencilRef={1}
-            stencilFunc={THREE.AlwaysStencilFunc}
-            stencilZPass={THREE.ReplaceStencilOp}
-          />
-        </mesh>
-      </TransformControls>
+      {/* <TransformControls mode='translate'> */}
+      <mesh
+        ref={venusRef}
+        position={[2, 0, -5]}>
+        {/* <sphereGeometry args={[0.95, 100, 100]} /> */}
+        <sphereGeometry args={[0.1, 100, 100]} />
+        <meshBasicMaterial
+          map={venusTexture}
+          side={THREE.DoubleSide}
+          stencilWrite={true}
+          stencilRef={1}
+          stencilFunc={THREE.AlwaysStencilFunc}
+          stencilZPass={THREE.ReplaceStencilOp}
+        />
+      </mesh>
+      {/* </TransformControls> */}
     </>
   );
 };

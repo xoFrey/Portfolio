@@ -49,21 +49,14 @@ function App() {
           <ScrollControls>
             <Stars />
             <Mercury />
-            {/* <Venus /> */}
+            <Venus />
             <Camera />
-            {/* <Rocket /> */}
-            {/* <Earth /> */}
-            {/* <EarthPage /> */}
+
             <EarthCard />
-            {/* <Mars /> */}
-            {/* <Jupiter /> */}
-            {/* <Saturn /> */}
-            {/* <Uranus /> */}
-            {/* <Neptune  */}
           </ScrollControls>
           <axesHelper args={[50]} />
           <gridHelper />
-          {/* <OrbitControls makeDefault /> */}
+          {/* <OrbitControls enableZoom={false} /> */}
         </Canvas>
       </div>
     </>
