@@ -48,10 +48,14 @@ function App() {
           gl={{ stencil: true }}>
           <ScrollControls>
             <Stars />
-            <Mercury />
+            {/* <Mercury /> */}
+            <directionalLight
+              position={[3, 1, 1]}
+              intensity={2}
+            />
+            <Earth />
             <Venus />
             <Camera />
-
             <EarthCard />
           </ScrollControls>
           <axesHelper args={[50]} />
