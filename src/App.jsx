@@ -46,7 +46,9 @@ function App() {
             aspect: window.innerWidth / window.innerHeight,
           }}
           gl={{ stencil: true }}>
-          <ScrollControls>
+          <ScrollControls
+            pages={10}
+            damping={0.5}>
             <Stars />
             {/* <Mercury /> */}
             <directionalLight
@@ -60,7 +62,7 @@ function App() {
           </ScrollControls>
           <axesHelper args={[50]} />
           <gridHelper />
-          {/* <OrbitControls enableZoom={false} /> */}
+          {/* <OrbitControls /> */}
         </Canvas>
       </div>
     </>
