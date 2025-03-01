@@ -3,8 +3,6 @@ import { useRef } from "react";
 import * as THREE from "three";
 
 const Earth = () => {
-  // ! LAGS
-
   const earthTexture = useLoader(THREE.TextureLoader, "/3D/earth.jpg");
   const earthSpecular = useLoader(THREE.TextureLoader, "/3D/earthspecular.jpg");
   const earthBump = useLoader(THREE.TextureLoader, "/3D/earthbump.jpg");

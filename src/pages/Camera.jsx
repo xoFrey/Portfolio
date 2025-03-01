@@ -1,6 +1,6 @@
 import { useScroll } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import * as THREE from "three";
 
 const Camera = () => {
@@ -26,12 +26,15 @@ const Camera = () => {
     const geometry = new THREE.BufferGeometry().setFromPoints(points);
     return geometry;
   }, [points]);
-
+  let prevScrollY = -1;
   useFrame(() => {
-    const scrollY = scroll.offset;
+    const scrollY = Math.max(0, scroll.offset);
 
     const position = curve.getPoint(scrollY);
-    camera.position.lerp(position, 0.1);
+
+    if (scrollY !== 1) {
+      camera.position.lerp(position, 0.1);
+    }
 
     const lookAtPoint = curve.getPoint(Math.min(scrollY + 0.1, 1));
     const currentLookAt = camera.getWorldDirection(new THREE.Vector3());

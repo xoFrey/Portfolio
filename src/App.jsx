@@ -25,6 +25,8 @@ import Sun from "./components/Sun/Sun";
 import Earth from "./components/Earth/Earth";
 import Camera from "./pages/Camera";
 import { Rocket } from "./components/Rocket";
+import TextCard from "./components/Text";
+
 // import LoadingPage from "./pages/LoadingPage";
 
 function App() {
@@ -58,7 +60,8 @@ function App() {
             <Earth />
             <Venus />
             <Camera />
-            <EarthCard />
+            {/* <EarthCard /> */}
+            <TextCard />
           </ScrollControls>
           <axesHelper args={[50]} />
           <gridHelper />
