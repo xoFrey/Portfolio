@@ -13,7 +13,7 @@ const Stars = ({ scrollRef, ...props }) => {
   const starRef = useRef();
 
   const sphere = useMemo(
-    () => random.inSphere(new Float32Array(5000 * 5), { radius: 150 }),
+    () => random.inSphere(new Float32Array(5000 * 5), { radius: 300 }),
     [],
   );
 

@@ -23,7 +23,7 @@ const Venus = () => {
       {/* <TransformControls mode='translate'> */}
       <mesh
         ref={venusRef}
-        position={[2, 0, -5]}>
+        position={[1.89, 0.1, -5]}>
         {/* <sphereGeometry args={[0.95, 100, 100]} /> */}
         <sphereGeometry args={[0.1, 100, 100]} />
         <meshBasicMaterial

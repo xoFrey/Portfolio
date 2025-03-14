@@ -18,6 +18,15 @@ const Camera = () => {
       new THREE.Vector3(0, 0.1, -1.5),
       new THREE.Vector3(0, 0, -3),
       new THREE.Vector3(1.5, 0, -4.5),
+
+      new THREE.Vector3(0, 2, -10),
+      new THREE.Vector3(0, 6, -25),
+      new THREE.Vector3(0, 12, -50),
+      new THREE.Vector3(0, 18, -80),
+      new THREE.Vector3(0, 25, -110),
+      new THREE.Vector3(0, 32, -140),
+      new THREE.Vector3(0, 40, -170),
+      new THREE.Vector3(0, 50, -200),
     ]);
   }, []);
 
@@ -26,11 +35,14 @@ const Camera = () => {
     const geometry = new THREE.BufferGeometry().setFromPoints(points);
     return geometry;
   }, [points]);
-  let prevScrollY = -1;
+
   useFrame(() => {
     const scrollY = Math.max(0, scroll.offset);
-
     const position = curve.getPoint(scrollY);
+    // console.log(position);
+    // ''    x: 1.4779426062777987;
+    //     y: -0.013236174629240371;
+    //     z: -4.432789442073612;''
 
     if (scrollY !== 1) {
       camera.position.lerp(position, 0.1);
@@ -48,7 +60,7 @@ const Camera = () => {
 
   return (
     <>
-      <group position={[0, 0, 0]}>
+      <group position={[0, -1, 0]}>
         <line>
           <bufferGeometry
             attach='geometry'

@@ -11,14 +11,10 @@ const Saturn = () => {
   );
   const saturnRef = useRef();
 
-  useFrame(() => {
-    if (saturnRef.current) {
-      saturnRef.current.rotation.y += 0.002;
-    }
-  });
   return (
     <group
-      position={[0.0, -100, 10.0]}
+      position={[0, 50, -200]}
+      rotation={[0.6, 0, -3.4]}
       ref={saturnRef}>
       <mesh position={[0, 0, 0]}>
         <sphereGeometry args={[9.45, 100, 100]} />

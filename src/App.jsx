@@ -41,7 +41,7 @@ function App() {
       <div className='scene'>
         <Canvas
           camera={{
-            fov: 100,
+            fov: 90,
             position: [0, 1, 3],
             // rotation: [1, Math.PI / 1, 0],
             up: [0, 1, 0],
@@ -55,11 +55,12 @@ function App() {
             {/* <Mercury /> */}
             <directionalLight
               position={[3, 1, 1]}
-              intensity={2}
+              intensity={1}
             />
             <Earth />
             <Venus />
             <Camera />
+            <Saturn />
             {/* <EarthCard /> */}
             <TextCard />
           </ScrollControls>
