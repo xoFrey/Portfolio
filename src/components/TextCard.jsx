@@ -20,35 +20,20 @@ const TextCard = () => {
     }
   });
 
-  useHelper(lightRef, DirectionalLightHelper, 1, "blue");
-
-  useEffect(() => {
-    lightRef.current.target = targetRef.current;
-    lightRef.current.target.updateMatrixWorld();
-  });
-
   return (
     <group>
-      <directionalLight
-        ref={lightRef}
-        position={[-1, 0, -4]}
-        intensity={1}
-        castShadow
-      />
       <Text
+        textAlign='center'
         ref={targetRef}
-        position={[0, 0, -5.3]}
-        rotation={[0.3, 0.2, -0.05]}
+        position={[-1.5, 0, -0]}
+        rotation={[0.1, 0, 0]}
         color='white'
-        anchorX='left'
-        anchorY='bottom'
         fillOpacity={opacity}
         fontSize={0.2}
         maxWidth={2.5}
         scale={0.4}
         lineHeight={1}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora est
-        voluptates a dolorum harum nostrum id dolor quisquam asperiores nisi?
+        Come in for a journey through space
         <meshStandardMaterial color={"white"} />
       </Text>
     </group>

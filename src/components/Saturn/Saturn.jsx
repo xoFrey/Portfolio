@@ -10,11 +10,15 @@ const Saturn = () => {
     "/3D/saturnring.png",
   );
   const saturnRef = useRef();
+  useFrame(() => {
+    saturnRef.current.rotation.y += 0.001;
+    // saturnRef.current.rotation.x += 0.01;
+  });
 
   return (
     <group
       position={[0, 50, -200]}
-      rotation={[0.6, 0, -3.4]}
+      rotation={[0.3, 0, 0]}
       ref={saturnRef}>
       <mesh position={[0, 0, 0]}>
         <sphereGeometry args={[9.45, 100, 100]} />

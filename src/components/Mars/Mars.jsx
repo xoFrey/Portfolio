@@ -8,13 +8,12 @@ const Mars = () => {
 
   useFrame(() => {
     marsRef.current.rotation.y += 0.001;
-    marsRef.current.rotation.x += 0.001;
   });
   return (
     <>
       <mesh
         ref={marsRef}
-        position={[0.0, -60, -10.0]}>
+        position={[3, 3, -10]}>
         <sphereGeometry args={[0.53, 100, 100]} />
         <meshBasicMaterial
           map={marsTexture}

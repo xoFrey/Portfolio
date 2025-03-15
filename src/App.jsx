@@ -25,16 +25,17 @@ import Sun from "./components/Sun/Sun";
 import Earth from "./components/Earth/Earth";
 import Camera from "./pages/Camera";
 import { Rocket } from "./components/Rocket";
-import TextCard from "./components/Text";
+import TextCard from "./components/TextCard";
+import LoadingPage from "./pages/LoadingPage/LoadingPage";
 
 // import LoadingPage from "./pages/LoadingPage";
 
 function App() {
-  const [showLoading, setShowLoading] = useState(false);
+  // const [showLoading, setShowLoading] = useState(true);
 
-  setTimeout(() => {
-    setShowLoading(false);
-  }, 6000);
+  // setTimeout(() => {
+  //   setShowLoading(false);
+  // }, 6000);
 
   return (
     <>
@@ -43,29 +44,30 @@ function App() {
           camera={{
             fov: 90,
             position: [0, 1, 3],
-            // rotation: [1, Math.PI / 1, 0],
             up: [0, 1, 0],
             aspect: window.innerWidth / window.innerHeight,
           }}
           gl={{ stencil: true }}>
           <ScrollControls
-            pages={10}
+            pages={20}
             damping={0.5}>
             <Stars />
-            {/* <Mercury /> */}
+
             <directionalLight
               position={[3, 1, 1]}
               intensity={1}
             />
+
             <Earth />
-            <Venus />
-            <Camera />
+            <Mars />
+            <Jupiter />
             <Saturn />
-            {/* <EarthCard /> */}
+            <Camera />
+
             <TextCard />
           </ScrollControls>
-          <axesHelper args={[50]} />
-          <gridHelper />
+          {/* <axesHelper args={[50]} />
+          // <gridHelper /> */}
           {/* <OrbitControls /> */}
         </Canvas>
       </div>
