@@ -1,7 +1,8 @@
-import { Text, useHelper, useScroll } from "@react-three/drei";
+import { Text, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useState } from "react";
-const EarthCard = () => {
+
+const MarsCard = () => {
   const scroll = useScroll();
   const [opacity, setOpacity] = useState(0);
 
@@ -35,5 +36,4 @@ const EarthCard = () => {
     </group>
   );
 };
-
-export default EarthCard;
+export default MarsCard;

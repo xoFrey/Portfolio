@@ -9,6 +9,7 @@ const Camera = () => {
 
   const curve = useMemo(() => {
     return new THREE.CatmullRomCurve3([
+      new THREE.Vector3(0, -0, 5),
       new THREE.Vector3(0, -0, 3),
       new THREE.Vector3(0, 0, 2),
       new THREE.Vector3(0, 0, 1.5),
@@ -39,33 +40,18 @@ const Camera = () => {
       new THREE.Vector3(-30, 30, -45),
       new THREE.Vector3(-50, 45, -70),
 
-      // !go around Jupiter
       new THREE.Vector3(-55.42, 60, -75.42),
-      new THREE.Vector3(-59.69, 60, -72.15),
       new THREE.Vector3(-64.66, 60, -70.09),
-      new THREE.Vector3(-70.0, 60, -69.38),
       new THREE.Vector3(-75.34, 60, -70.09),
-      new THREE.Vector3(-80.31, 60, -72.15),
       new THREE.Vector3(-84.58, 60, -75.42),
-      new THREE.Vector3(-87.85, 60, -79.69),
-      new THREE.Vector3(-89.91, 60, -84.66),
       new THREE.Vector3(-90.62, 60, -90.0),
-      new THREE.Vector3(-89.91, 60, -95.34),
-      new THREE.Vector3(-87.85, 60, -100.31),
       new THREE.Vector3(-84.58, 60, -104.58),
-      new THREE.Vector3(-80.31, 60, -107.85),
       new THREE.Vector3(-75.34, 60, -109.91),
-      new THREE.Vector3(-70.0, 60, -110.62),
       new THREE.Vector3(-64.66, 60, -109.91),
-      new THREE.Vector3(-59.69, 60, -107.85),
       new THREE.Vector3(-55.42, 60, -104.58),
-      // new THREE.Vector3(-52.15, 60, -100.31),
-      // new THREE.Vector3(-50.09, 60, -95.34),
-      // new THREE.Vector3(-49.38, 60, -90.0),
-      // new THREE.Vector3(-50.09, 60, -84.66),
-
-      //! Way to Saturn
-      new THREE.Vector3(10, 50, -180),
+      new THREE.Vector3(-45, 55, -120), // Intermediate smooth point
+      new THREE.Vector3(-25, 55, -150), // Intermediate smooth point
+      new THREE.Vector3(10, 50, -180), // Final smooth connection
     ]);
   }, []);
 

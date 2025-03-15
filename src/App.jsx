@@ -1,44 +1,26 @@
-import { Canvas, useThree } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import "./App.css";
-// import SolarSystem from "./pages/SolarSystem";
-// import Techs from "./pages/Techs";
 import Stars from "./components/Stars";
 import { useEffect, useRef, useState } from "react";
 import EarthCard from "./components/Earth/EarthCard";
-import {
-  OrbitControls,
-  PerspectiveCamera,
-  ScrollControls,
-  Text3D,
-  useHelper,
-} from "@react-three/drei";
-import { CameraHelper as ThreeCameraHelper } from "three";
-import EarthPage from "./pages/EarthPage";
+import { OrbitControls, ScrollControls } from "@react-three/drei";
 import Mars from "./components/Mars/Mars";
 import Jupiter from "./components/Jupiter/Jupiter";
 import Saturn from "./components/Saturn/Saturn";
-import Mercury from "./components/Mercury/Mercury";
-import Venus from "./components/Venus/Venus";
-import Uranus from "./components/Uranus/Uranus";
-import Neptune from "./components/Neptune/Neptune";
-import Sun from "./components/Sun/Sun";
 import Earth from "./components/Earth/Earth";
 import Camera from "./pages/Camera";
-import { Rocket } from "./components/Rocket";
-import TextCard from "./components/TextCard";
 import LoadingPage from "./pages/LoadingPage/LoadingPage";
 
-// import LoadingPage from "./pages/LoadingPage";
-
 function App() {
-  // const [showLoading, setShowLoading] = useState(true);
+  const [showLoading, setShowLoading] = useState(true);
 
-  // setTimeout(() => {
-  //   setShowLoading(false);
-  // }, 6000);
+  setTimeout(() => {
+    setShowLoading(false);
+  }, 6000);
 
   return (
     <>
+      {showLoading && <LoadingPage />}
       <div className='scene'>
         <Canvas
           camera={{
@@ -49,7 +31,7 @@ function App() {
           }}
           gl={{ stencil: true }}>
           <ScrollControls
-            pages={20}
+            pages={10}
             damping={0.5}>
             <Stars />
 
@@ -64,7 +46,7 @@ function App() {
             <Saturn />
             <Camera />
 
-            <TextCard />
+            <EarthCard />
           </ScrollControls>
           {/* <axesHelper args={[50]} />
           // <gridHelper /> */}
