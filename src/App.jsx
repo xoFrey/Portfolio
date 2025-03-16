@@ -10,9 +10,10 @@ import Saturn from "./components/Saturn/Saturn";
 import Earth from "./components/Earth/Earth";
 import Camera from "./pages/Camera";
 import LoadingPage from "./pages/LoadingPage/LoadingPage";
+import MarsCard from "./components/Mars/MarsCard";
 
 function App() {
-  const [showLoading, setShowLoading] = useState(true);
+  const [showLoading, setShowLoading] = useState(false);
 
   setTimeout(() => {
     setShowLoading(false);
@@ -47,6 +48,7 @@ function App() {
             <Camera />
 
             <EarthCard />
+            <MarsCard />
           </ScrollControls>
           {/* <axesHelper args={[50]} />
           // <gridHelper /> */}

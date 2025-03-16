@@ -1,4 +1,4 @@
-import { Text, useScroll } from "@react-three/drei";
+import { Html, Text, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useState } from "react";
 
@@ -7,14 +7,12 @@ const MarsCard = () => {
   const [opacity, setOpacity] = useState(0);
 
   useFrame(() => {
-    console.log(scroll.offset);
-    // ! m = opacity/scroll.offset(end)-scroll.offset(start), opacity= m*scroll.offset(start)+b
-    // ! b = opacity(1) - m*scroll.offset(start)
-
-    if (scroll.offset <= 0.064) {
-      setOpacity(66.96 * scroll.offset - 3);
-    } else if (scroll.offset > 0.04) {
-      setOpacity(-100.4 * scroll.offset + 11.51);
+    // console.log(scroll.offset);
+    if (scroll.offset >= 0.27842 && scroll.offset <= 0.2983) {
+      setOpacity(50.3 * scroll.offset - 14.02);
+    } else if (scroll.offset >= 0.318) {
+      setOpacity(-50.3 * scroll.offset + 17.0);
+      // console.log("h");
     }
   });
 
@@ -22,16 +20,29 @@ const MarsCard = () => {
     <group>
       <Text
         textAlign='center'
-        position={[-1.5, 0, -0]}
-        rotation={[0.1, 0, 0]}
-        color='white'
-        fillOpacity={opacity}
+        position={[4, 3.02, -10]}
+        color='#E68D59'
         fontSize={0.2}
-        maxWidth={2.5}
+        scale={0.4}
+        fillOpacity={opacity}
+        lineHeight={1}
+        onPointerOver={() => (document.body.style.cursor = "pointer")}
+        onPointerOut={() => (document.body.style.cursor = "auto")}
+        onClick={() => window.open("https://github.com/xofrey", "_blank")}>
+        <meshStandardMaterial color={"white"} />
+        Click me
+      </Text>
+      <Text
+        textAlign='center'
+        position={[4, 2.9, -10]}
+        color='white'
+        fontSize={0.2}
+        maxWidth={2}
+        fillOpacity={opacity}
         scale={0.4}
         lineHeight={1}>
-        Come in for a journey through space
         <meshStandardMaterial color={"white"} />
+        to visit my Github Repo!
       </Text>
     </group>
   );

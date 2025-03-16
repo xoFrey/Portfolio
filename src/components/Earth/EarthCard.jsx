@@ -6,14 +6,14 @@ const EarthCard = () => {
   const [opacity, setOpacity] = useState(0);
 
   useFrame(() => {
-    console.log(scroll.offset);
+    // console.log(scroll.offset);
     // ! m = opacity/scroll.offset(end)-scroll.offset(start), opacity= m*scroll.offset(start)+b
     // ! b = opacity(1) - m*scroll.offset(start)
 
-    if (scroll.offset <= 0.064) {
-      setOpacity(66.96 * scroll.offset - 3);
-    } else if (scroll.offset > 0.04) {
-      setOpacity(-100.4 * scroll.offset + 11.51);
+    if (scroll.offset >= 0.079 && scroll.offset <= 0.0996) {
+      setOpacity(50.2 * scroll.offset - 4.0);
+    } else if (scroll.offset > 0.129) {
+      setOpacity(-100.4 * scroll.offset + 14.01);
     }
   });
 
@@ -26,10 +26,10 @@ const EarthCard = () => {
         color='white'
         fillOpacity={opacity}
         fontSize={0.2}
-        maxWidth={2.5}
+        maxWidth={2}
         scale={0.4}
         lineHeight={1}>
-        Come in for a journey through space
+        Im a junior Full-Stack developer
         <meshStandardMaterial color={"white"} />
       </Text>
     </group>

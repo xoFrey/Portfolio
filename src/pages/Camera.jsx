@@ -64,6 +64,7 @@ const Camera = () => {
   useFrame(() => {
     const scrollY = Math.max(0, scroll.offset);
     const position = curve.getPoint(scrollY);
+    // console.log(position);
 
     if (scrollY !== 1) {
       camera.position.lerp(position, 0.1);
