@@ -22,7 +22,7 @@ const EarthCard = () => {
       <Text
         textAlign='center'
         position={[-1.5, 0, -0]}
-        rotation={[0.1, 0, 0]}
+        rotation={[0, 0.1, 0]}
         color='white'
         fillOpacity={opacity}
         fontSize={0.2}

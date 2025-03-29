@@ -64,7 +64,6 @@ const Camera = () => {
   useFrame(() => {
     const scrollY = Math.max(0, scroll.offset);
     const position = curve.getPoint(scrollY);
-    // console.log(position);
 
     if (scrollY !== 1) {
       camera.position.lerp(position, 0.1);
@@ -82,7 +81,7 @@ const Camera = () => {
 
   return (
     <>
-      {/* <group position={[0, -1, 0]}>
+      <group position={[0, -1, 0]}>
         <line>
           <bufferGeometry
             attach='geometry'
@@ -94,7 +93,7 @@ const Camera = () => {
             linewidth={10}
           />
         </line>
-      </group> */}
+      </group>
     </>
   );
 };

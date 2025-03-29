@@ -11,6 +11,7 @@ import Earth from "./components/Earth/Earth";
 import Camera from "./pages/Camera";
 import LoadingPage from "./pages/LoadingPage/LoadingPage";
 import MarsCard from "./components/Mars/MarsCard";
+import AfterEarthCard from "./components/AfterEarthCard";
 
 function App() {
   const [showLoading, setShowLoading] = useState(false);
@@ -48,10 +49,11 @@ function App() {
             <Camera />
 
             <EarthCard />
+            <AfterEarthCard />
             <MarsCard />
           </ScrollControls>
-          {/* <axesHelper args={[50]} />
-          // <gridHelper /> */}
+          <axesHelper args={[50]} />
+          // <gridHelper />
           {/* <OrbitControls /> */}
         </Canvas>
       </div>
