@@ -10,11 +10,11 @@ const AfterEarthCard = () => {
     console.log(scroll.offset);
     // ! m = opacity/scroll.offset(end)-scroll.offset(start), opacity= m*scroll.offset(start)+b
     // ! b = opacity(1) - m*scroll.offset(start)
-    if (scroll.offset >= 0.2284 && scroll.offset <= 0.2383) {
+    if (scroll.offset >= 0.24 && scroll.offset <= 0.26) {
       // Normierte Steigung berechnen für den Bereich von 0 bis 1
-      setOpacity(107.38 * scroll.offset - 24.53);
-    } else if (scroll.offset >= 0.24) {
-      setOpacity(-839.4 * scroll.offset + 202.27);
+      setOpacity(50.25 * scroll.offset - 12.2);
+    } else if (scroll.offset >= 0.265) {
+      setOpacity(-502.51 * scroll.offset + 134.25);
     }
   });
 
@@ -22,8 +22,8 @@ const AfterEarthCard = () => {
     <group>
       <Text
         textAlign='center'
-        position={[1.2, 0.64, -4.7]}
-        rotation={[0.1, -0.8, 0]}
+        position={[3, 2.3, -7.8]}
+        rotation={[0.02, -0.7, 0]}
         color='white'
         fillOpacity={opacity}
         fontSize={0.2}
