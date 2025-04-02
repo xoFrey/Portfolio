@@ -30,3 +30,9 @@ html {
   background-size: cover;
   background-repeat: no-repeat; */
 }
+
+h1 {
+  font-size: 120px;
+  color: white;
+  margin-bottom: 30px;
+}

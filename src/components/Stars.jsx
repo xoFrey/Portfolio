@@ -9,11 +9,11 @@ import { useMemo, useRef } from "react";
 import * as random from "maath/random/dist/maath-random.esm";
 import { useFrame, useThree } from "@react-three/fiber";
 
-const Stars = ({ scrollRef, ...props }) => {
+const Stars = ({ props }) => {
   const starRef = useRef();
 
   const sphere = useMemo(
-    () => random.inSphere(new Float32Array(5000 * 5), { radius: 300 }),
+    () => random.inSphere(new Float32Array(5000 * 3), { radius: 300 }),
     [],
   );
 

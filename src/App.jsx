@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import "./App.css";
 import Stars from "./components/Stars";
-import { useEffect, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import EarthCard from "./components/Earth/EarthCard";
 import { OrbitControls, ScrollControls } from "@react-three/drei";
 import Mars from "./components/Mars/Mars";
@@ -12,9 +12,17 @@ import Camera from "./pages/Camera";
 import LoadingPage from "./pages/LoadingPage/LoadingPage";
 import MarsCard from "./components/Mars/MarsCard";
 import AfterEarthCard from "./components/AfterEarthCard";
+import LandingPage from "./pages/LandingPage/LandingPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+const Planets = lazy(() => import("./pages/SolarSystem/Planets"));
 
 function App() {
   const [showLoading, setShowLoading] = useState(false);
+
+  useEffect(() => {
+    Planets?.preload?.();
+  }, []);
 
   setTimeout(() => {
     setShowLoading(false);
@@ -22,38 +30,23 @@ function App() {
 
   return (
     <>
-      {showLoading && <LoadingPage />}
-      <div className='scene'>
-        <Canvas
-          camera={{
-            fov: 90,
-            position: [0, 1, 3],
-            up: [0, 1, 0],
-            aspect: window.innerWidth / window.innerHeight,
-          }}
-          gl={{ stencil: true }}>
-          <ScrollControls
-            pages={10}
-            damping={0.5}>
-            <directionalLight
-              position={[3, 1, 1]}
-              intensity={1}
-            />
-            <Stars />
-            <Earth />
-            <Mars />
-            <Jupiter />
-            <Saturn />
-            <Camera />
-            <EarthCard />
-            {/* <AfterEarthCard /> */}
-            <MarsCard />
-          </ScrollControls>
-          {/* <axesHelper args={[50]} /> */}
-          {/* // <gridHelper /> */}
-          {/* <OrbitControls /> */}
-        </Canvas>
-      </div>
+      {/* {showLoading && <LoadingPage />} */}
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path='/'
+            element={<LandingPage />}
+          />
+          <Route
+            path='/planets'
+            element={
+              <Suspense fallback={<LoadingPage />}>
+                <Planets />
+              </Suspense>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
