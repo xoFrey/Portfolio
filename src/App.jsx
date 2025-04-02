@@ -35,25 +35,22 @@ function App() {
           <ScrollControls
             pages={10}
             damping={0.5}>
-            <Stars />
-
             <directionalLight
               position={[3, 1, 1]}
               intensity={1}
             />
-
+            <Stars />
             <Earth />
             <Mars />
             <Jupiter />
             <Saturn />
             <Camera />
-
             <EarthCard />
-            <AfterEarthCard />
+            {/* <AfterEarthCard /> */}
             <MarsCard />
           </ScrollControls>
-          <axesHelper args={[50]} />
-          // <gridHelper />
+          {/* <axesHelper args={[50]} /> */}
+          {/* // <gridHelper /> */}
           {/* <OrbitControls /> */}
         </Canvas>
       </div>
