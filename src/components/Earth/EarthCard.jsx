@@ -29,7 +29,7 @@ const EarthCard = () => {
         maxWidth={2}
         scale={0.4}
         lineHeight={1}>
-        Im a junior Full-Stack developer
+        Somewhere here we are!
         <meshStandardMaterial color={"white"} />
       </Text>
     </group>
