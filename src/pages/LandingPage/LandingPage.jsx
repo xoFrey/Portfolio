@@ -2,27 +2,51 @@ import { Link, useNavigate } from "react-router-dom";
 import "./LandingPage.css";
 import { Canvas } from "@react-three/fiber";
 import Stars from "../../components/Stars";
-import { useState } from "react";
+import { RiArrowRightSLine } from "react-icons/ri";
+import Navbar from "../../components/Navbar/Navbar";
+import { ScrollControls } from "@react-three/drei";
+import { useRef } from "react";
 
 const LandingPage = () => {
-  const navigate = useNavigate();
+  const aboutRef = useRef();
+  const homeRef = useRef();
 
   return (
-    <div className='front'>
-      <Canvas>
-        <Stars />
-      </Canvas>
-      <section className='frontpage'>
-        <h1>Welcome</h1>
-        <div className='btn'>
-          <button
-            className='a'
-            onClick={() => navigate("/planets")}>
-            Click me
-          </button>
-        </div>
-      </section>
-    </div>
+    <>
+      <div className='front'>
+        <Canvas>
+          <Stars />
+        </Canvas>
+        <Navbar
+          aboutRef={aboutRef}
+          homeRef={homeRef}
+        />
+        <section
+          className='welcome'
+          ref={homeRef}>
+          <h2>Welcome </h2>
+        </section>
+        <section
+          ref={aboutRef}
+          className='about'>
+          <p>
+            Hi! My name is Izel and I am a junior Full-Stack Webdeveloper. In
+            this short portfolio you will experience a ThreeJS project I have
+            been working on and playing around with. This portfolio is still in
+            the making with new techs and skills, that I am aquiring myself
+            through the journey of becoming more experienced in what I do. Thank
+            you for watching and please proceed and enjoy.{" "}
+          </p>
+          <div className='button'>
+            <Link to='/planets'>Explore the Planets</Link>
+            <RiArrowRightSLine
+              fill='white'
+              size={"20px"}
+            />
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 

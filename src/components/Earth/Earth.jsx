@@ -1,3 +1,4 @@
+import { Preload } from "@react-three/drei";
 import { useFrame, useLoader, useThree } from "@react-three/fiber";
 import { useRef } from "react";
 import * as THREE from "three";

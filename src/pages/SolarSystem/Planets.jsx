@@ -1,4 +1,4 @@
-import { ScrollControls } from "@react-three/drei";
+import { Preload, ScrollControls } from "@react-three/drei";
 import Stars from "../../components/Stars";
 import Earth from "../../components/Earth/Earth";
 import Mars from "../../components/Mars/Mars";
@@ -8,12 +8,38 @@ import Camera from "../Camera";
 import EarthCard from "../../components/Earth/EarthCard";
 import MarsCard from "../../components/Mars/MarsCard";
 import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
+import { RiArrowLeftLine } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const Planets = () => {
+  const navigate = useNavigate();
+  const [showMessage, setShowMessage] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowMessage(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className='scene'>
-      <Suspense fallback={() => console.log("Hiiii")}>
+      <>
+        <div
+          className='go-back-btn'
+          onClick={() => navigate("/")}>
+          <RiArrowLeftLine
+            fill='white'
+            size={"30px"}
+          />
+        </div>
+
+        <div className={`message ${!showMessage ? "fade-out" : ""}`}>
+          <p>Scroll to enjoy the journey!</p>
+        </div>
+
         <Canvas
           camera={{
             fov: 90,
@@ -34,17 +60,15 @@ const Planets = () => {
             <Saturn />
             <Camera />
             <EarthCard />
-
             <MarsCard />
           </ScrollControls>
-
-          {/* <axesHelper args={[50]} /> */}
-          {/* // <gridHelper /> */}
-          {/* <OrbitControls /> */}
+          <Preload
+            all
+            onProgress={() => console.log("Hallo")}
+          />
         </Canvas>
-      </Suspense>
+      </>
     </div>
   );
 };
-
 export default Planets;

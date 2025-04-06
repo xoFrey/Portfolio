@@ -26,13 +26,30 @@
 }
 html {
   background-color: rgb(0, 0, 0);
-  /* background: url("/milkyway.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; */
 }
 
-h1 {
-  font-size: 120px;
+.go-back-btn {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  cursor: pointer;
+  z-index: 50;
+}
+
+.message {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
   color: white;
-  margin-bottom: 30px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  z-index: 1000;
+}
+
+.fade-out {
+  opacity: 0;
 }

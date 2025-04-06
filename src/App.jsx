@@ -3,7 +3,7 @@ import "./App.css";
 import Stars from "./components/Stars";
 import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import EarthCard from "./components/Earth/EarthCard";
-import { OrbitControls, ScrollControls } from "@react-three/drei";
+import { OrbitControls, Preload, ScrollControls } from "@react-three/drei";
 import Mars from "./components/Mars/Mars";
 import Jupiter from "./components/Jupiter/Jupiter";
 import Saturn from "./components/Saturn/Saturn";
@@ -15,22 +15,11 @@ import AfterEarthCard from "./components/AfterEarthCard";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-const Planets = lazy(() => import("./pages/SolarSystem/Planets"));
+const ThreeAPP = lazy(() => import("./pages/SolarSystem/Planets"));
 
 function App() {
-  const [showLoading, setShowLoading] = useState(false);
-
-  useEffect(() => {
-    Planets?.preload?.();
-  }, []);
-
-  setTimeout(() => {
-    setShowLoading(false);
-  }, 6000);
-
   return (
     <>
-      {/* {showLoading && <LoadingPage />} */}
       <BrowserRouter>
         <Routes>
           <Route
@@ -41,7 +30,7 @@ function App() {
             path='/planets'
             element={
               <Suspense fallback={<LoadingPage />}>
-                <Planets />
+                <ThreeAPP />
               </Suspense>
             }
           />

@@ -1,0 +1,49 @@
+nav {
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  padding: 10px 30px;
+  position: fixed;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 30vw;
+}
+
+li {
+  font-size: 12px;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.logo-container {
+  cursor: pointer;
+}
+
+.logo {
+  cursor: pointer;
+  display: block;
+  font-size: 30px;
+  color: white;
+  border: 1px white solid;
+  border-radius: 50%;
+  outline: 3px solid rgb(255, 255, 255);
+  outline-offset: 3px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 2px;
+}
+
+ul li:hover {
+  letter-spacing: 3px;
+}
