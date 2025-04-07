@@ -1,16 +1,17 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
-import { useRef } from "react";
 
 const Navbar = ({ aboutRef, homeRef }) => {
   return (
     <nav>
       <div className='logo-container'>
-        <Link
-          className='logo'
-          to='/'>
-          I
-        </Link>
+        <a
+          onClick={() =>
+            homeRef.current?.scrollIntoView({ behavior: "smooth" })
+          }
+          className='logo '>
+          IA
+        </a>
       </div>
       <div>
         <ul>

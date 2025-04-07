@@ -6,6 +6,7 @@ import { RiArrowRightSLine } from "react-icons/ri";
 import Navbar from "../../components/Navbar/Navbar";
 import { ScrollControls } from "@react-three/drei";
 import { useRef } from "react";
+import { SlArrowDown } from "react-icons/sl";
 
 const LandingPage = () => {
   const aboutRef = useRef();
@@ -25,6 +26,24 @@ const LandingPage = () => {
           className='welcome'
           ref={homeRef}>
           <h2>Welcome </h2>
+          <div
+            className='container'
+            onClick={() =>
+              aboutRef.current?.scrollIntoView({ behavior: "smooth" })
+            }>
+            <div class='arrow arrow-first'>
+              <SlArrowDown
+                fill='white'
+                size={"30px"}
+              />
+            </div>
+            <div class='arrow arrow-second'>
+              <SlArrowDown
+                fill='white'
+                size={"30px"}
+              />
+            </div>
+          </div>
         </section>
         <section
           ref={aboutRef}

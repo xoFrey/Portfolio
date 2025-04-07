@@ -3,3 +3,44 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  font-family: Orbitron;
+}
+
+@font-face {
+  font-family: Finlandica;
+  src: url(../fonts/Finlandica/Finlandica-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Gruppo;
+  src: url(../public/fonts/Gruppo/Gruppo-Regular.ttf);
+}
+@font-face {
+  font-family: Hubot Sans;
+  src: url(../public/fonts/Hubot_Sans/HubotSans-VariableFont_wdth\wght.ttf);
+}
+@font-face {
+  font-family: Jura;
+  src: url(../public/fonts/Jura/Jura-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Montserrat;
+  src: url(../public/fonts/Montserrat_Alternates/MontserratAlternates-Regular.ttf);
+}
+@font-face {
+  font-family: Orbitron;
+  src: url(../public/fonts/Orbitron/Orbitron-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Poiret One;
+  src: url(../public/fonts/Poiret_One/PoiretOne-Regular.ttf);
+}
+@font-face {
+  font-family: Prompt;
+  src: url(../public/fonts/Prompt/Prompt-Regular.ttf);
+}
+@font-face {
+  font-family: Urbanist;
+  src: url(../public/fonts/Urbanist/Urbanist-VariableFont_wght.ttf);
+}

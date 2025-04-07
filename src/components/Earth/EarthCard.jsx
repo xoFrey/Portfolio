@@ -28,6 +28,7 @@ const EarthCard = () => {
         fontSize={0.2}
         maxWidth={2}
         scale={0.4}
+        font={"../public/fonts/Orbitron/Orbitron-VariableFont_wght.ttf"}
         lineHeight={1}>
         Somewhere here we are!
         <meshStandardMaterial color={"white"} />

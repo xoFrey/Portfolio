@@ -7,12 +7,10 @@ const MarsCard = () => {
   const [opacity, setOpacity] = useState(0);
 
   useFrame(() => {
-    // console.log(scroll.offset);
     if (scroll.offset >= 0.27842 && scroll.offset <= 0.2983) {
       setOpacity(50.3 * scroll.offset - 14.02);
     } else if (scroll.offset >= 0.318) {
       setOpacity(-50.3 * scroll.offset + 17.0);
-      // console.log("h");
     }
   });
 
@@ -24,6 +22,7 @@ const MarsCard = () => {
         color='#E68D59'
         fontSize={0.2}
         scale={0.4}
+        font={"../public/fonts/Orbitron/Orbitron-VariableFont_wght.ttf"}
         fillOpacity={opacity}
         lineHeight={1}
         onPointerOver={() => (document.body.style.cursor = "pointer")}
@@ -38,6 +37,7 @@ const MarsCard = () => {
         color='white'
         fontSize={0.2}
         maxWidth={2}
+        font={"../public/fonts/Orbitron/Orbitron-VariableFont_wght.ttf"}
         fillOpacity={opacity}
         scale={0.4}
         lineHeight={1}>

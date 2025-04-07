@@ -1,25 +1,33 @@
-import { Text } from "@react-three/drei";
+import { Text, useScroll } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 import { useState } from "react";
 
 const JupiterCard = () => {
-  const [opacity, setOpacity] = useState(1);
-  x: -55.65921849480712;
-  y: 60.1647546646937;
-  z: -75.37257532423925;
+  const [opacity, setOpacity] = useState(0);
+  const scroll = useScroll();
+
+  useFrame(() => {
+    if (scroll.offset >= 0.676 && scroll.offset <= 0.716) {
+      setOpacity(25.13 * scroll.offset - 17);
+    } else if (scroll.offset >= 0.726) {
+      setOpacity(-50.25 * scroll.offset + 37.49);
+    }
+  });
+
   return (
     <group>
-      <ambientLight intensity={3} />
       <Text
         textAlign='center'
-        position={[-79, 60, -74]}
+        position={[-80, 60, -74]}
         rotation={[0, 1, 0]}
         color='white'
         fillOpacity={opacity}
-        fontSize={3}
-        maxWidth={2}
+        fontSize={5}
+        font={"../public/fonts/Orbitron/Orbitron-VariableFont_wght.ttf"}
+        maxWidth={30}
         scale={0.4}
         lineHeight={1}>
-        Somewhere here we are!
+        This is some informational text!
         <meshStandardMaterial color={"white"} />
       </Text>
     </group>
