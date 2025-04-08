@@ -14,6 +14,7 @@ import MarsCard from "./components/Mars/MarsCard";
 import AfterEarthCard from "./components/AfterEarthCard";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import SlideShow from "./pages/SlideShow/SlideShow";
 
 const ThreeAPP = lazy(() => import("./pages/SolarSystem/Planets"));
 
@@ -33,6 +34,10 @@ function App() {
                 <ThreeAPP />
               </Suspense>
             }
+          />
+          <Route
+            path='/projects'
+            element={<SlideShow />}
           />
         </Routes>
       </BrowserRouter>

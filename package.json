@@ -15,9 +15,13 @@
     "@react-three/postprocessing": "^2.19.1",
     "maath": "^0.10.8",
     "react": "^18.3.1",
+    "react-animated-slider": "^1.1.4",
     "react-dom": "^18.3.1",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.4.1",
+    "react-slick": "^0.30.3",
+    "react-slideshow-image": "^4.3.2",
+    "slick-carousel": "^1.8.1",
     "three": "^0.173.0",
     "three-stdlib": "^2.35.13"
   },
