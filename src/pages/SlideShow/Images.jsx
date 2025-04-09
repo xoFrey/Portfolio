@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./SlideShow.css";
-const Images = ({ url }) => {
+const Images = ({ url, preview }) => {
   const [imageIndex, setImageIndex] = useState(0);
 
   const showNextImage = () => {
@@ -41,7 +41,7 @@ const Images = ({ url }) => {
         Previous
       </button>
       <div className='index-img'>
-        {url.map((url, index) => (
+        {preview.map((url, index) => (
           <img
             className={`${index === imageIndex ? "active" : ""} mini-img`}
             key={index}

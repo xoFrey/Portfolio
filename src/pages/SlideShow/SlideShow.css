@@ -1,20 +1,16 @@
 .slideshow-bg {
-  /* max-width: 800px; */
   width: 100vw;
   height: 100vh;
-  /* margin: 3% auto; */
+
   position: relative;
-  /* border: 1px solid #ccc; */
-  /* border-radius: 12px; */
 }
 
 .slideshow {
-  /* max-width: 800px; */
   width: 70vw;
-  height: 70vh;
+  height: 80vh;
   margin: 0 auto;
   position: absolute;
-  top: 15%;
+  top: 5%;
   left: 15%;
   border: 1px solid #ccc;
   border-radius: 12px;
@@ -84,9 +80,10 @@
 
 .mini-img {
   cursor: pointer;
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  padding: 2px;
   border-radius: 10px;
   border: 1px white solid;
   transition: scale 0.3s ease-in-out;

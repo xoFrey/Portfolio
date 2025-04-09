@@ -16,23 +16,26 @@ const Navbar = ({ aboutRef, homeRef }) => {
       <div>
         <ul>
           <li>
-            <a
+            <Link
               onClick={() =>
                 homeRef.current?.scrollIntoView({ behavior: "smooth" })
               }>
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               onClick={() =>
                 aboutRef.current?.scrollIntoView({ behavior: "smooth" })
               }>
               About me
-            </a>
+            </Link>
           </li>
           <li>
             <Link to='/planets'>Journey</Link>
+          </li>{" "}
+          <li>
+            <Link to='/projects'>Projects</Link>
           </li>
         </ul>
       </div>
