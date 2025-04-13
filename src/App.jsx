@@ -15,8 +15,7 @@ import AfterEarthCard from "./components/AfterEarthCard";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SlideShow from "./pages/SlideShow/SlideShow";
-
-const ThreeAPP = lazy(() => import("./pages/SolarSystem/Planets"));
+import Planets from "./pages/SolarSystem/Planets";
 
 function App() {
   return (
@@ -31,7 +30,7 @@ function App() {
             path='/planets'
             element={
               <Suspense fallback={<LoadingPage />}>
-                <ThreeAPP />
+                <Planets />
               </Suspense>
             }
           />
