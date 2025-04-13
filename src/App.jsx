@@ -28,11 +28,7 @@ function App() {
           />
           <Route
             path='/planets'
-            element={
-              <Suspense fallback={<LoadingPage />}>
-                <Planets />
-              </Suspense>
-            }
+            element={<Planets />}
           />
           <Route
             path='/projects'
