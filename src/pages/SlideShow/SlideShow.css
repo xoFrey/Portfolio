@@ -31,6 +31,7 @@
 
 .image-strip {
   display: flex;
+  gap: 10px;
   width: 100%;
   height: 100%;
   transition: transform 300ms ease-in-out;
@@ -91,4 +92,32 @@
 
 .active {
   scale: 1.5;
+}
+
+.project-img {
+  border: 1px solid white;
+}
+
+.project-img:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+.project-slide {
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  justify-content: center;
+  gap: 1rem;
+  padding: 10px;
+}
+
+.project-img img {
+  max-width: 100%;
+  transition: all 0.5s ease-in-out;
+  filter: grayscale(100%);
+}
+
+.project-img img:hover {
+  filter: grayscale(0%);
 }

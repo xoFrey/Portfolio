@@ -46,18 +46,3 @@ function App() {
 }
 
 export default App;
-
-// {
-//   showLoading ? (
-//     <>
-//       <LoadingPage />
-//     </>
-//   ) : (
-//     <>
-//       <Canvas camera={{ fov: 70, position: [3, 10, 39] }}>
-//         {/* <SolarSystem /> */}
-//         <Techs />
-//       </Canvas>
-//     </>
-//   );
-// }
