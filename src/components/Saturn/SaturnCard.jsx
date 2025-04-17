@@ -22,7 +22,7 @@ const SaturnCard = () => {
         fillOpacity={opacity}
         fontSize={10}
         maxWidth={100}
-        font={"../public/fonts/Orbitron/Orbitron-VariableFont_wght.ttf"}
+        font={"../fonts/Orbitron/Orbitron-VariableFont_wght.ttf"}
         scale={0.4}
         lineHeight={1}>
         Thank you for taking this journey!

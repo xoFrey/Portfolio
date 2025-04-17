@@ -22,7 +22,7 @@ const MarsCard = () => {
         color='#E68D59'
         fontSize={0.2}
         scale={0.4}
-        font={"../public/fonts/Orbitron/Orbitron-VariableFont_wght.ttf"}
+        font={"../fonts/Orbitron/Orbitron-VariableFont_wght.ttf"}
         fillOpacity={opacity}
         lineHeight={1}
         onPointerOver={() => (document.body.style.cursor = "pointer")}
@@ -37,7 +37,7 @@ const MarsCard = () => {
         color='white'
         fontSize={0.2}
         maxWidth={2}
-        font={"../public/fonts/Orbitron/Orbitron-VariableFont_wght.ttf"}
+        font={"../fonts/Orbitron/Orbitron-VariableFont_wght.ttf"}
         fillOpacity={opacity}
         scale={0.4}
         lineHeight={1}>

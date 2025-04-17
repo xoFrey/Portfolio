@@ -23,7 +23,7 @@ const JupiterCard = () => {
         color='white'
         fillOpacity={opacity}
         fontSize={5}
-        font={"../public/fonts/Orbitron/Orbitron-VariableFont_wght.ttf"}
+        font={"../fonts/Orbitron/Orbitron-VariableFont_wght.ttf"}
         maxWidth={30}
         scale={0.4}
         lineHeight={1}>
