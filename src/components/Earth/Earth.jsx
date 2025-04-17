@@ -67,10 +67,10 @@ const Earth = () => {
           side={THREE.DoubleSide}
           specularMap={earthSpecular}
           bumpMap={earthBump}
-          stencilWrite={true}
-          stencilRef={1}
-          stencilFunc={THREE.AlwaysStencilFunc}
-          stencilZPass={THREE.ReplaceStencilOp}
+          // stencilWrite={true}
+          // stencilRef={1}
+          // stencilFunc={THREE.AlwaysStencilFunc}
+          // stencilZPass={THREE.ReplaceStencilOp}
         />
       </mesh>
       <mesh>

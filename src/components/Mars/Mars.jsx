@@ -18,10 +18,10 @@ const Mars = () => {
         <meshBasicMaterial
           map={marsTexture}
           side={THREE.DoubleSide}
-          stencilWrite={true}
-          stencilRef={1}
-          stencilFunc={THREE.AlwaysStencilFunc}
-          stencilZPass={THREE.ReplaceStencilOp}
+          // stencilWrite={true}
+          // stencilRef={1}
+          // stencilFunc={THREE.AlwaysStencilFunc}
+          // stencilZPass={THREE.ReplaceStencilOp}
         />
       </mesh>
     </>

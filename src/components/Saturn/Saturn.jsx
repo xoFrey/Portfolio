@@ -25,10 +25,10 @@ const Saturn = () => {
         <meshBasicMaterial
           map={saturnTexture}
           side={THREE.DoubleSide}
-          stencilWrite={true}
-          stencilRef={1}
-          stencilFunc={THREE.AlwaysStencilFunc}
-          stencilZPass={THREE.ReplaceStencilOp}
+          // stencilWrite={true}
+          // stencilRef={1}
+          // stencilFunc={THREE.AlwaysStencilFunc}
+          // stencilZPass={THREE.ReplaceStencilOp}
         />
       </mesh>
       <mesh rotation={[Math.PI / 2, 0, 0]}>

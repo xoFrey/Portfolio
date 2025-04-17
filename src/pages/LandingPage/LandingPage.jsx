@@ -31,13 +31,13 @@ const LandingPage = () => {
             onClick={() =>
               aboutRef.current?.scrollIntoView({ behavior: "smooth" })
             }>
-            <div class='arrow arrow-first'>
+            <div className='arrow arrow-first'>
               <SlArrowDown
                 fill='white'
                 size={"30px"}
               />
             </div>
-            <div class='arrow arrow-second'>
+            <div className='arrow arrow-second'>
               <SlArrowDown
                 fill='white'
                 size={"30px"}
@@ -57,11 +57,13 @@ const LandingPage = () => {
             you for watching and please proceed and enjoy.{" "}
           </p>
           <div className='button'>
-            <Link to='/planets'>Explore the Planets</Link>
-            <RiArrowRightSLine
-              fill='white'
-              size={"20px"}
-            />
+            <Link to='/planets'>
+              Explore the Planets
+              <RiArrowRightSLine
+                fill='white'
+                size={"20px"}
+              />
+            </Link>
           </div>
         </section>
       </div>

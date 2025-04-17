@@ -18,10 +18,10 @@ const Jupiter = () => {
         <meshBasicMaterial
           map={jupiterTexture}
           side={THREE.DoubleSide}
-          stencilWrite={true}
-          stencilRef={1}
-          stencilFunc={THREE.AlwaysStencilFunc}
-          stencilZPass={THREE.ReplaceStencilOp}
+          // stencilWrite={true}
+          // stencilRef={1}
+          // stencilFunc={THREE.AlwaysStencilFunc}
+          // stencilZPass={THREE.ReplaceStencilOp}
         />
       </mesh>
     </>
