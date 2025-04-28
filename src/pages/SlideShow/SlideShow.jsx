@@ -4,10 +4,13 @@ import "./SlideShow.css";
 import Stars from "../../components/Stars";
 
 const SlideShow = () => {
-  const images = [
-    ["../Screenshot1.jpg", "../Screenshot2.jpg", "../Screenshot3.jpg"],
-    ["../Screenshot3.jpg", "../Screenshot1.jpg", "../Screenshot2.jpg"],
-  ];
+  const images = {
+    titles: ["MovieFlix", "Silent Moon", "Pokemon", "Tasty"],
+    url: [
+      ["../Screenshot1.jpg", "../Screenshot2.jpg", "../Screenshot3.jpg"],
+      ["../Screenshot3.jpg", "../Screenshot1.jpg", "../Screenshot2.jpg"],
+    ],
+  };
 
   const minis = [
     "../MovieFlix Logo.png",
@@ -23,7 +26,7 @@ const SlideShow = () => {
         </Canvas>
         <div className='slideshow'>
           <Images
-            Imgurl={images}
+            images={images}
             preview={minis}
           />
         </div>

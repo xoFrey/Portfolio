@@ -6,13 +6,13 @@
 }
 
 .slideshow {
-  width: 70vw;
+  width: 80vw;
   height: 80vh;
   margin: 0 auto;
   position: absolute;
   top: 5%;
-  left: 15%;
-  border: 1px solid #ccc;
+  left: 10%;
+  /* border: 1px solid #ccc; */
   border-radius: 12px;
 }
 
@@ -96,6 +96,9 @@
 
 .project-img {
   border: 1px solid white;
+  border-radius: 16px;
+
+  overflow: hidden;
 }
 
 .project-img:hover {
@@ -114,10 +117,35 @@
 
 .project-img img {
   max-width: 100%;
+
   transition: all 0.5s ease-in-out;
   filter: grayscale(100%);
 }
 
 .project-img img:hover {
   filter: grayscale(0%);
+}
+
+.title {
+  font-size: 35px;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 45%;
+  z-index: 1;
+}
+
+.slide-in {
+  animation: slideTop 0.5s forwards;
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
