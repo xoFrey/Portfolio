@@ -8,7 +8,15 @@ const SlideShow = () => {
     titles: ["MovieFlix", "Silent Moon", "Pokemon", "Tasty"],
     url: [
       ["../Screenshot1.jpg", "../Screenshot2.jpg", "../Screenshot3.jpg"],
-      ["../Screenshot3.jpg", "../Screenshot1.jpg", "../Screenshot2.jpg"],
+      [
+        "../Landingpage.png",
+        "../Login.png",
+        "../Home.png",
+        "../Yoga.png",
+        "../Spotify.png",
+        "../SpotifyPlayer.png",
+        "../Profile.png",
+      ],
     ],
   };
 
