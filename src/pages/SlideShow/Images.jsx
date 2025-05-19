@@ -42,11 +42,12 @@ const Images = ({ images, preview }) => {
         {zoomImage ? (
           <div className='zoom'>
             <img
+              className='zoomed-img'
               src={images.url[projectIndex][imageIndex]}
               alt=''
             />
             <div
-              className='close-btn'
+              className='close-btn '
               onClick={() => setZoomImage(false)}>
               <IoIosCloseCircleOutline
                 size={"40px"}

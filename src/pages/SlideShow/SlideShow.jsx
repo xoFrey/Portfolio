@@ -17,6 +17,24 @@ const SlideShow = () => {
         "../SpotifyPlayer.png",
         "../Profile.png",
       ],
+      [
+        "../HomeLight.png",
+        "../HomeDark.png",
+        "../SearchLight.png",
+        "../SearchDark.png",
+        "../DetailLight.png",
+        "../DetailDark.png",
+      ],
+      [
+        "../loading.png",
+        "../starting.png",
+        "../tastyhome.png",
+        "../searchbar.png",
+        "../search.png",
+        "../instructions.png",
+        "../ingredients.png",
+        "../filter.png",
+      ],
     ],
   };
 
