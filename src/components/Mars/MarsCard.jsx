@@ -37,7 +37,7 @@ const MarsCard = () => {
         color='white'
         fontSize={0.2}
         maxWidth={2}
-        font={"../fonts/Orbitron/Orbitron-VariableFont_wght.ttf"}
+        font={"../fonts/Jura/Jura-VariableFont_wght.ttf"}
         fillOpacity={opacity}
         scale={0.4}
         lineHeight={1}>

@@ -17,15 +17,15 @@ const SaturnCard = () => {
       <Text
         textAlign='center'
         position={[40, 49, -182]}
-        rotation={[0, -0.98, 0]}
+        rotation={[0, -0.97, 0]}
         color='white'
         fillOpacity={opacity}
         fontSize={10}
         maxWidth={100}
-        font={"../fonts/Orbitron/Orbitron-VariableFont_wght.ttf"}
+        font={"../fonts/Jura/Jura-VariableFont_wght.ttf"}
         scale={0.4}
-        lineHeight={1}>
-        Thank you for taking this small journey!
+        lineHeight={1.2}>
+        Thank you for taking this little journey!
         <meshStandardMaterial color={"white"} />
       </Text>
     </group>

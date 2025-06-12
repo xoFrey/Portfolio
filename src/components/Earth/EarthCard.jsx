@@ -25,12 +25,14 @@ const EarthCard = () => {
         rotation={[0, 0.1, 0]}
         color='white'
         fillOpacity={opacity}
-        fontSize={0.2}
+        fontSize={0.18}
         maxWidth={2}
-        scale={0.4}
-        font={"../fonts/Orbitron/Orbitron-VariableFont_wght.ttf"}
+        scale={0.45}
+        font={"../fonts/Jura/Jura-VariableFont_wght.ttf"}
         lineHeight={1}>
-        Welcome to my journey!
+        Welcome to my journey!{"\n"}
+        {"\n"} After exploring different paths, I found my passion in
+        programming and completed a bootcamp to become a Full-Stack Webdeveloper
         <meshStandardMaterial color={"white"} />
       </Text>
     </group>

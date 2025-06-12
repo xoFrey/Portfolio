@@ -18,16 +18,17 @@ const JupiterCard = () => {
     <group>
       <Text
         textAlign='center'
-        position={[-80, 60, -74]}
+        position={[-82, 60, -73]}
         rotation={[0, 1, 0]}
         color='white'
         fillOpacity={opacity}
         fontSize={5}
-        font={"../fonts/Orbitron/Orbitron-VariableFont_wght.ttf"}
-        maxWidth={35}
-        scale={0.4}
+        font={"../fonts/Jura/Jura-VariableFont_wght.ttf"}
+        maxWidth={60}
+        scale={0.3}
         lineHeight={1.2}>
-        I hope you enjoyed the ride
+        I'm highly motivated to continuously learn new skills and technologies
+        to grow as a developer.
         <meshStandardMaterial color={"white"} />
       </Text>
     </group>
