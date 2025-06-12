@@ -120,9 +120,11 @@
   font-size: 35px;
   color: white;
   position: fixed;
-  top: 0;
+  top: 2%;
   left: 45%;
   z-index: 1;
+  display: flex;
+  gap: 10px;
 }
 
 .slide-in {

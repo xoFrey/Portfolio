@@ -30,7 +30,7 @@ const EarthCard = () => {
         scale={0.4}
         font={"../fonts/Orbitron/Orbitron-VariableFont_wght.ttf"}
         lineHeight={1}>
-        Somewhere here we are!
+        Welcome to my journey!
         <meshStandardMaterial color={"white"} />
       </Text>
     </group>

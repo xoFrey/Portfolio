@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import "./SlideShow.css";
-import { RiCloseCircleFill } from "react-icons/ri";
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import { BsGithub } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Images = ({ images, preview }) => {
   const [projectIndex, setProjectIndex] = useState(0);
@@ -32,12 +33,16 @@ const Images = ({ images, preview }) => {
     );
   };
 
-  console.log(images.url[0][1], imageIndex);
   return (
     <section className='slider'>
       <div className='slider-wrap'>
         <h2 className={`title ${buttonPressed ? "slide-in" : ""}`}>
           {images.titles[projectIndex]}
+          <Link
+            to={images.github[projectIndex]}
+            target='_blank'>
+            <BsGithub />
+          </Link>
         </h2>
         {zoomImage ? (
           <div className='zoom'>

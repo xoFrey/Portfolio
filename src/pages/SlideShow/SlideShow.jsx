@@ -2,8 +2,11 @@ import { Canvas } from "@react-three/fiber";
 import Images from "./Images";
 import "./SlideShow.css";
 import Stars from "../../components/Stars";
+import { RiArrowLeftLine } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 
 const SlideShow = () => {
+  const navigate = useNavigate();
   const images = {
     titles: ["MovieFlix", "Silent Moon", "Pokemon", "Tasty"],
     url: [
@@ -36,6 +39,12 @@ const SlideShow = () => {
         "../filter.png",
       ],
     ],
+    github: [
+      "https://github.com/xoFrey/MovieFlix",
+      "https://github.com/xoFrey/Silent_Moon",
+      "https://github.com/xoFrey/PokeDex",
+      "https://github.com/xoFrey/TastyApp",
+    ],
   };
 
   const minis = [
@@ -44,12 +53,21 @@ const SlideShow = () => {
     "../PokemonLogo.png",
     "../TastyLogo.png",
   ];
+
   return (
     <>
       <section className='slideshow-bg'>
         <Canvas>
           <Stars />
-        </Canvas>
+        </Canvas>{" "}
+        <div
+          className='go-back-btn'
+          onClick={() => navigate("/")}>
+          <RiArrowLeftLine
+            fill='white'
+            size={"30px"}
+          />
+        </div>
         <div className='slideshow'>
           <Images
             images={images}

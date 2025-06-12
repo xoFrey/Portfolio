@@ -25,7 +25,7 @@ const SaturnCard = () => {
         font={"../fonts/Orbitron/Orbitron-VariableFont_wght.ttf"}
         scale={0.4}
         lineHeight={1}>
-        Thank you for taking this journey!
+        Thank you for taking this small journey!
         <meshStandardMaterial color={"white"} />
       </Text>
     </group>

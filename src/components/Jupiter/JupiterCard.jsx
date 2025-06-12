@@ -24,10 +24,10 @@ const JupiterCard = () => {
         fillOpacity={opacity}
         fontSize={5}
         font={"../fonts/Orbitron/Orbitron-VariableFont_wght.ttf"}
-        maxWidth={30}
+        maxWidth={35}
         scale={0.4}
-        lineHeight={1}>
-        This is some informational text!
+        lineHeight={1.2}>
+        I hope you enjoyed the ride
         <meshStandardMaterial color={"white"} />
       </Text>
     </group>
