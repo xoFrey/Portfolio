@@ -4,23 +4,31 @@ import { Canvas } from "@react-three/fiber";
 import Stars from "../../components/Stars";
 import { RiArrowRightSLine } from "react-icons/ri";
 import Navbar from "../../components/Navbar/Navbar";
-import { ScrollControls } from "@react-three/drei";
+import {
+  Decal,
+  Environment,
+  OrbitControls,
+  useTexture,
+} from "@react-three/drei";
 import { useRef } from "react";
 import { SlArrowDown } from "react-icons/sl";
+import TechStack from "../../components/TechStack/TechStack";
 
 const LandingPage = () => {
   const aboutRef = useRef();
   const homeRef = useRef();
+  const techstackRef = useRef();
 
   return (
     <>
       <div className='front'>
-        <Canvas>
+        <Canvas style={{ position: "fixed" }}>
           <Stars />
         </Canvas>
         <Navbar
           aboutRef={aboutRef}
           homeRef={homeRef}
+          techStackRef={techstackRef}
         />
         <section
           className='welcome'
@@ -64,7 +72,35 @@ const LandingPage = () => {
                 size={"20px"}
               />
             </Link>
+            <div
+              className='container'
+              onClick={() =>
+                techstackRef.current?.scrollIntoView({ behavior: "smooth" })
+              }>
+              <div className='arrow arrow-first'>
+                <SlArrowDown
+                  fill='white'
+                  size={"30px"}
+                />
+              </div>
+              <div className='arrow arrow-second'>
+                <SlArrowDown
+                  fill='white'
+                  size={"30px"}
+                />
+              </div>
+            </div>
           </div>
+        </section>
+        <section
+          ref={techstackRef}
+          className='techstack'>
+          <Canvas
+            orthographic
+            camera={{ position: [0, 0, 20], zoom: 80 }}>
+            <TechStack />
+            <ambientLight intensity={0.8} />
+          </Canvas>
         </section>
       </div>
     </>
