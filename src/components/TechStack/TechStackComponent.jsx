@@ -44,8 +44,7 @@ const TechStackComponent = ({ texture, position, name }) => {
           ref={meshRef}
           castShadow
           receiveShadow
-          onPointerDown={() => handleDown()}
-          onPointerUp={() => handleUp()}>
+          onPointerDown={() => setShowInfo(!showInfo)}>
           <icosahedronGeometry args={[0.9, 1]} />
           <meshStandardMaterial
             color={showInfo ? "#ffd68f" : "#9bbacc"}

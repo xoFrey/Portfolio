@@ -31,14 +31,15 @@ h2 {
 .button {
   border-top: 1px white solid;
   border-bottom: 1px solid white;
-  display: flex;
-  align-items: center;
-  justify-self: center;
-  gap: 3px;
   padding: 10px 15px;
   cursor: pointer;
   transition: 0.5s ease-in-out;
   letter-spacing: 1px;
+}
+
+.button a {
+  display: flex;
+  align-items: center;
 }
 
 a {
@@ -88,6 +89,18 @@ a {
   flex-direction: column;
 }
 
+/* !slideshow */
+.slideshow-section {
+  position: absolute;
+  top: 300vh;
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 /* !Arrow */
 
 .container {

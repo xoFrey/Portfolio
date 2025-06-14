@@ -13,11 +13,13 @@ import {
 import { useRef } from "react";
 import { SlArrowDown } from "react-icons/sl";
 import TechStack from "../../components/TechStack/TechStack";
+import SlideShow from "../SlideShow/SlideShow";
 
 const LandingPage = () => {
   const aboutRef = useRef();
   const homeRef = useRef();
   const techstackRef = useRef();
+  const slideShowRef = useRef();
 
   return (
     <>
@@ -33,7 +35,7 @@ const LandingPage = () => {
         <section
           className='welcome'
           ref={homeRef}>
-          <h2>Welcome </h2>
+          <h2>Welcome</h2>
           <div
             className='container'
             onClick={() =>
@@ -60,13 +62,13 @@ const LandingPage = () => {
             Hi! My name is Izel and I am a junior Full-Stack Webdeveloper. In
             this short portfolio you will experience a ThreeJS project I have
             been working on and playing around with. This portfolio is still in
-            the making with new techs and skills, that I am aquiring myself
+            the making with new techs and skills, that I am aquiring by myself
             through the journey of becoming more experienced in what I do. Thank
-            you for watching and please proceed and enjoy.{" "}
+            you for watching and please proceed, enjoy!
           </p>
           <div className='button'>
             <Link to='/planets'>
-              Explore the Planets
+              Explore my Journey
               <RiArrowRightSLine
                 fill='white'
                 size={"20px"}
@@ -91,7 +93,26 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
+          <div
+            className='container'
+            onClick={() =>
+              slideShowRef.current?.scrollIntoView({ behavior: "smooth" })
+            }>
+            <div className='arrow arrow-first'>
+              <SlArrowDown
+                fill='white'
+                size={"30px"}
+              />
+            </div>
+            <div className='arrow arrow-second'>
+              <SlArrowDown
+                fill='white'
+                size={"30px"}
+              />
+            </div>
+          </div>
         </section>
+
         <section
           ref={techstackRef}
           className='techstack'>
@@ -101,6 +122,29 @@ const LandingPage = () => {
             <TechStack />
             <ambientLight intensity={0.8} />
           </Canvas>
+          <div
+            className='container'
+            onClick={() =>
+              slideShowRef.current?.scrollIntoView({ behavior: "smooth" })
+            }>
+            <div className='arrow arrow-first'>
+              <SlArrowDown
+                fill='white'
+                size={"30px"}
+              />
+            </div>
+            <div className='arrow arrow-second'>
+              <SlArrowDown
+                fill='white'
+                size={"30px"}
+              />
+            </div>
+          </div>
+        </section>
+        <section
+          ref={slideShowRef}
+          className='slideshow-section'>
+          <SlideShow />
         </section>
       </div>
     </>
