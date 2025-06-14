@@ -31,6 +31,10 @@ const Navbar = ({ aboutRef, homeRef, techStackRef }) => {
               About me
             </Link>
           </li>
+
+          <li>
+            <Link to='/planets'>Journey</Link>
+          </li>
           <li>
             <Link
               onClick={() =>
@@ -39,9 +43,6 @@ const Navbar = ({ aboutRef, homeRef, techStackRef }) => {
               Tech Stack
             </Link>
           </li>
-          <li>
-            <Link to='/planets'>Journey</Link>
-          </li>{" "}
           <li>
             <Link to='/projects'>Projects</Link>
           </li>

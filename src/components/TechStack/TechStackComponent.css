@@ -1,0 +1,12 @@
+.techstack-text {
+  animation: fade 0.3s ease-in-out;
+  color: white;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

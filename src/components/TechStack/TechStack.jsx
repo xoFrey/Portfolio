@@ -1,4 +1,10 @@
-import { useTexture } from "@react-three/drei";
+import {
+  DragControls,
+  OrbitControls,
+  PresentationControls,
+  TransformControls,
+  useTexture,
+} from "@react-three/drei";
 
 import TechStackComponent from "./TechStackComponent";
 
@@ -27,60 +33,74 @@ const TechStack = () => {
       />
       <TechStackComponent
         texture={htmlTexture}
-        position={[-7, 2, 0]}
+        position={[-10.5, 2, 0]}
+        name={"HTML"}
       />
       <TechStackComponent
         texture={cssTexture}
-        position={[-5, 2, 0]}
+        position={[-7.5, 2, 0]}
+        name={"CSS"}
       />
       <TechStackComponent
         texture={tailwindTexture}
-        position={[-3, 2, 0]}
+        position={[-4.5, 2, 0]}
+        name={"Tailwind"}
       />
       <TechStackComponent
         texture={javascriptTexture}
-        position={[-1, 2, 0]}
+        position={[-1.5, 2, 0]}
+        name={"JavaScript"}
       />
       <TechStackComponent
         texture={reactTexture}
-        position={[1, 2, 0]}
+        position={[1.5, 2, 0]}
+        name={"React"}
       />
       <TechStackComponent
         texture={javaTexture}
-        position={[3, 2, 0]}
+        position={[4.5, 2, 0]}
+        name={"Java"}
       />
       <TechStackComponent
         texture={pythonTexture}
-        position={[5, 2, 0]}
-      />
-      <TechStackComponent
-        texture={nextJSTexture}
-        position={[5, 0, 0]}
+        position={[7.5, 2, 0]}
+        name={"Python"}
       />
       <TechStackComponent
         texture={nodeJSTexture}
-        position={[7, 2, 0]}
+        position={[10.5, 2, 0]}
+        name={"NodeJS"}
+      />{" "}
+      <TechStackComponent
+        texture={nextJSTexture}
+        position={[7.5, -1, 0]}
+        name={"NextJS"}
       />
       <TechStackComponent
         texture={mongoDBTexture}
-        position={[-5, 0, 0]}
+        position={[-7.5, -1, 0]}
+        name={"MongoDB"}
       />
       <TechStackComponent
         texture={expressTexture}
-        position={[-3, 0, 0]}
+        position={[-4.5, -1, 0]}
+        name={"Express"}
       />
       <TechStackComponent
         texture={figmaTexture}
-        position={[-1, 0, 0]}
+        position={[-1.5, -1, 0]}
+        name={"Figma"}
       />
       <TechStackComponent
         texture={threeJSTexture}
-        position={[1, 0, 0]}
+        position={[1.5, -1, 0]}
+        name={"ThreeJS"}
       />
       <TechStackComponent
         texture={gitHubTexture}
-        position={[3, 0, 0]}
-      />
+        position={[4.5, -1, 0]}
+        name={"GitHub"}
+      />{" "}
     </>
   );
 };
