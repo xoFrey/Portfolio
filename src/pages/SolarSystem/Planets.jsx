@@ -50,7 +50,7 @@ const Planets = () => {
           }}
           gl={{ stencil: true }}>
           <ScrollControls
-            pages={10}
+            pages={3}
             damping={0.5}>
             <directionalLight
               position={[3, 1, 1]}

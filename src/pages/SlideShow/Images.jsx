@@ -3,6 +3,7 @@ import "./SlideShow.css";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import Projects from "./Projects";
 
 const Images = ({ images, preview }) => {
   const [projectIndex, setProjectIndex] = useState(0);
@@ -36,64 +37,8 @@ const Images = ({ images, preview }) => {
   return (
     <section className='slider'>
       <div className='slider-wrap'>
-        <h2 className={`title ${buttonPressed ? "slide-in" : ""}`}>
-          {images.titles[projectIndex]}
-          <Link
-            to={images.github[projectIndex]}
-            target='_blank'>
-            <BsGithub />
-          </Link>
-        </h2>
-        {zoomImage ? (
-          <div className='zoom'>
-            <img
-              className='zoomed-img'
-              src={images.url[projectIndex][imageIndex]}
-              alt=''
-            />
-            <div
-              className='close-btn '
-              onClick={() => setZoomImage(false)}>
-              <IoIosCloseCircleOutline
-                size={"40px"}
-                fill='#ffae00'
-              />
-            </div>
-          </div>
-        ) : null}
-        <div
-          className='image-strip'
-          style={{ transform: `translateX(${-100 * projectIndex}%)` }}>
-          {images.url.map((projectImages, index) => (
-            <div
-              className='project-slide'
-              key={index}>
-              {projectImages.map((url, idx) => (
-                <div
-                  onClick={() => (setZoomImage(true), setImageIndex(idx))}
-                  className={`project-img ${zoomImage ? "blur" : ""}`}
-                  key={idx}>
-                  <img
-                    src={url}
-                    alt={`Projekt ${index + 1} Bild ${idx + 1}`}
-                  />
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
+        <Projects />
       </div>
-
-      <button
-        onClick={showNextProject}
-        className='slider-button right-btn'>
-        Next
-      </button>
-      <button
-        onClick={showPrevProject}
-        className='slider-button left-btn'>
-        Previous
-      </button>
 
       <div className='index-img'>
         {preview.map((url, index) => (

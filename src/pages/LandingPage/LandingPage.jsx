@@ -4,12 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import Stars from "../../components/Stars";
 import { RiArrowRightSLine } from "react-icons/ri";
 import Navbar from "../../components/Navbar/Navbar";
-import {
-  Decal,
-  Environment,
-  OrbitControls,
-  useTexture,
-} from "@react-three/drei";
+
 import { useRef } from "react";
 import { SlArrowDown } from "react-icons/sl";
 import TechStack from "../../components/TechStack/TechStack";
@@ -144,6 +139,7 @@ const LandingPage = () => {
         <section
           ref={slideShowRef}
           className='slideshow-section'>
+          {/* <Projects /> */}
           <SlideShow />
         </section>
       </div>

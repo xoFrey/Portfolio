@@ -22,7 +22,7 @@ const TechStack = () => {
   const expressTexture = useTexture("/texture/Express.png");
   const figmaTexture = useTexture("/texture/Figma.png");
   const threeJSTexture = useTexture("/texture/Three.js.png");
-  const gitHubTexture = useTexture("/texture/GitHub.png");
+  const gitTexture = useTexture("/texture/Git.png");
 
   return (
     <>
@@ -97,9 +97,9 @@ const TechStack = () => {
         name={"ThreeJS"}
       />
       <TechStackComponent
-        texture={gitHubTexture}
+        texture={gitTexture}
         position={[4.5, -1, 0]}
-        name={"GitHub"}
+        name={"Git"}
       />{" "}
     </>
   );

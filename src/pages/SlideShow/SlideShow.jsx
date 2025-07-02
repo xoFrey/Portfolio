@@ -4,10 +4,13 @@ import "./SlideShow.css";
 import Stars from "../../components/Stars";
 import { RiArrowLeftLine } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
+import Projects from "./Projects";
+import { useState } from "react";
 
 const SlideShow = () => {
   const navigate = useNavigate();
-  const images = {
+  const [projectIndex, setProjectIndex] = useState(0);
+  const projects = {
     titles: ["MovieFlix", "Silent Moon", "Pokemon", "Tasty"],
     url: [
       ["../Screenshot1.jpg", "../Screenshot2.jpg", "../Screenshot3.jpg"],
@@ -53,25 +56,18 @@ const SlideShow = () => {
     "../PokemonLogo.png",
     "../TastyLogo.png",
   ];
-
+  console.log(projectIndex);
   return (
     <>
-      <section className='slideshow-bg'>
-        <Canvas>
-          <Stars />
-        </Canvas>{" "}
-        <div
-          className='go-back-btn'
-          onClick={() => navigate("/")}>
-          <RiArrowLeftLine
-            fill='white'
-            size={"30px"}
-          />
-        </div>
+      <section>
         <div className='slideshow'>
-          <Images
-            images={images}
-            preview={minis}
+          <Projects
+            url={projects.url}
+            title={projects.titles}
+            github={projects.github}
+            projectIndex={projectIndex}
+            setProjectIndex={setProjectIndex}
+            minis={minis}
           />
         </div>
       </section>
