@@ -34,35 +34,6 @@
       }
     },
     {
-      "appName": "MealExplorer",
-      "description": "MealExplorer helps you discover and explore meals from around the world. Get a random meal of the day, browse by region or category, search by name, and view detailed recipes with ingredients and instructions. Save favorites and personalize your profile in upcoming updates.",
-      "techStack": [
-        "ReactJS Vite",
-        "JavaScript",
-        "HTML5",
-        "CSS",
-        "themealdb API"
-      ],
-      "features": {
-        "current": {
-          "Homepage Display": [
-            "Discover a random “Meal of the Day” each time you visit.",
-            "Explore food by region with clickable Area links (e.g., French, Italian).",
-            "Browse by Categories such as Desserts, Seafood, or Vegetarian."
-          ],
-          "Meal Search": ["Use the search bar to find meals by their name."],
-          "Meal Detail View": [
-            "Click on a meal to view its full recipe details.",
-            "See ingredients, measurements, and step-by-step cooking instructions."
-          ]
-        },
-        "upcoming": {
-          "Favorites": ["Save and revisit your favorite recipes anytime."],
-          "Profile": ["Personalize your experience with custom user settings."]
-        }
-      }
-    },
-    {
       "appName": "Silent Moon",
       "description": "Silent Moon is a mindfulness and exercise app where users can register, create a personalized profile, search and filter exercises, and receive tailored recommendations. Features include offline downloads, reminders, and notifications to keep users engaged and relaxed.",
       "techStack": [
@@ -125,6 +96,35 @@
           ]
         },
         "upcoming": {}
+      }
+    },
+    {
+      "appName": "Tasty",
+      "description": "Tasty helps you discover and explore meals from around the world. Get a random meal of the day, browse by region or category, search by name, and view detailed recipes with ingredients and instructions. Save favorites and personalize your profile in upcoming updates.",
+      "techStack": [
+        "ReactJS Vite",
+        "JavaScript",
+        "HTML5",
+        "CSS",
+        "themealdb API"
+      ],
+      "features": {
+        "current": {
+          "Homepage Display": [
+            "Discover a random “Meal of the Day” each time you visit.",
+            "Explore food by region with clickable Area links (e.g., French, Italian).",
+            "Browse by Categories such as Desserts, Seafood, or Vegetarian."
+          ],
+          "Meal Search": ["Use the search bar to find meals by their name."],
+          "Meal Detail View": [
+            "Click on a meal to view its full recipe details.",
+            "See ingredients, measurements, and step-by-step cooking instructions."
+          ]
+        },
+        "upcoming": {
+          "Favorites": ["Save and revisit your favorite recipes anytime."],
+          "Profile": ["Personalize your experience with custom user settings."]
+        }
       }
     }
   ]

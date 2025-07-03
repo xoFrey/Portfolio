@@ -10,7 +10,7 @@ nav {
   position: fixed;
 }
 
-ul {
+nav ul {
   list-style-type: none;
   display: flex;
   align-items: center;
@@ -18,7 +18,7 @@ ul {
   width: 30vw;
 }
 
-li {
+nav li {
   font-size: 12px;
   transition: 0.5s ease-in-out;
   cursor: pointer;
@@ -48,6 +48,6 @@ li {
   letter-spacing: -5px;
 }
 
-ul li:hover {
+nav ul li:hover {
   letter-spacing: 3px;
 }

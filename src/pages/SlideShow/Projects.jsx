@@ -89,12 +89,12 @@ const Projects = ({
     setIsClicked(false);
   };
 
-  console.log(itemsRef.current.length);
+  console.log(projectIndex);
 
   return (
     <>
       <section className='projects-slider'>
-        {url[projectIndex].map((item, index) => (
+        {url[projectIndex]?.map((item, index) => (
           <div
             key={index}
             className='item'
@@ -109,8 +109,42 @@ const Projects = ({
         <div
           onClick={() => setIsClicked(!isClicked)}
           className={`image-back${isClicked ? "" : " invisible"}`}>
-          <div>
-            <h2>{projects[projectIndex].appName}</h2>
+          <div className='info-card'>
+            <h3>{projects[projectIndex]?.appName}</h3>
+            <p>{projects[projectIndex]?.description}</p>
+            <div>
+              <div className='techstack-info'>
+                <h4>Build With:</h4>
+                {projects[projectIndex]?.techStack.map((item, index) => (
+                  <ul
+                    className='bulletpoints'
+                    key={index}>
+                    <li>{item}</li>
+                  </ul>
+                ))}
+              </div>
+              <div className='features'>
+                <div className='features-header'>
+                  <h4>Features:</h4>
+                </div>
+
+                {projects[projectIndex]?.features?.current &&
+                  Object.entries(projects[projectIndex].features.current).map(
+                    ([featureName, featureItems]) => (
+                      <div
+                        key={featureName}
+                        className='feature-box'>
+                        <h5>{featureName}:</h5>
+                        <ul>
+                          {featureItems.map((item, index) => (
+                            <li key={index}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ),
+                  )}
+              </div>
+            </div>
           </div>
         </div>
 
