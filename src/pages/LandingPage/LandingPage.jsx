@@ -4,9 +4,9 @@ import { Canvas } from "@react-three/fiber";
 import Stars from "../../components/Stars";
 import { RiArrowRightSLine } from "react-icons/ri";
 import Navbar from "../../components/Navbar/Navbar";
-
 import { useRef } from "react";
 import { SlArrowDown } from "react-icons/sl";
+
 import TechStack from "../../components/TechStack/TechStack";
 import SlideShow from "../SlideShow/SlideShow";
 
@@ -26,6 +26,7 @@ const LandingPage = () => {
           aboutRef={aboutRef}
           homeRef={homeRef}
           techStackRef={techstackRef}
+          slideShowRef={slideShowRef}
         />
         <section
           className='welcome'
@@ -88,24 +89,6 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
-          <div
-            className='container'
-            onClick={() =>
-              slideShowRef.current?.scrollIntoView({ behavior: "smooth" })
-            }>
-            <div className='arrow arrow-first'>
-              <SlArrowDown
-                fill='white'
-                size={"30px"}
-              />
-            </div>
-            <div className='arrow arrow-second'>
-              <SlArrowDown
-                fill='white'
-                size={"30px"}
-              />
-            </div>
-          </div>
         </section>
 
         <section
@@ -129,6 +112,7 @@ const LandingPage = () => {
               />
             </div>
             <div className='arrow arrow-second'>
+              5
               <SlArrowDown
                 fill='white'
                 size={"30px"}
@@ -139,7 +123,6 @@ const LandingPage = () => {
         <section
           ref={slideShowRef}
           className='slideshow-section'>
-          {/* <Projects /> */}
           <SlideShow />
         </section>
       </div>

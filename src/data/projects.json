@@ -1,0 +1,131 @@
+{
+  "apps": [
+    {
+      "appName": "MovieFlix",
+      "description": "MovieFlix is a movie discovery app where users can browse all available movies, explore trending ones, search by title, and view detailed information about each movie. Upcoming features include saving favorites and personalizing your profile.",
+      "techStack": [
+        "React Native",
+        "TypeScript",
+        "HTML5",
+        "Tailwind CSS",
+        "Appwrite",
+        "themoviedb API"
+      ],
+      "features": {
+        "current": {
+          "Homepage Display": [
+            "View all available movies at a glance.",
+            "Browse trending movies based on user search activity."
+          ],
+          "Movie Search": [
+            "Search for movies by title using the dedicated search page."
+          ],
+          "Movie Detail View": [
+            "Click on any movie to view its detailed information.",
+            "Details include title, description, release year, and more."
+          ]
+        },
+        "upcoming": {
+          "Favorites": ["Save movies you love for quick access later."],
+          "Profile": [
+            "Personalize your experience with user settings and preferences."
+          ]
+        }
+      }
+    },
+    {
+      "appName": "MealExplorer",
+      "description": "MealExplorer helps you discover and explore meals from around the world. Get a random meal of the day, browse by region or category, search by name, and view detailed recipes with ingredients and instructions. Save favorites and personalize your profile in upcoming updates.",
+      "techStack": [
+        "ReactJS Vite",
+        "JavaScript",
+        "HTML5",
+        "CSS",
+        "themealdb API"
+      ],
+      "features": {
+        "current": {
+          "Homepage Display": [
+            "Discover a random “Meal of the Day” each time you visit.",
+            "Explore food by region with clickable Area links (e.g., French, Italian).",
+            "Browse by Categories such as Desserts, Seafood, or Vegetarian."
+          ],
+          "Meal Search": ["Use the search bar to find meals by their name."],
+          "Meal Detail View": [
+            "Click on a meal to view its full recipe details.",
+            "See ingredients, measurements, and step-by-step cooking instructions."
+          ]
+        },
+        "upcoming": {
+          "Favorites": ["Save and revisit your favorite recipes anytime."],
+          "Profile": ["Personalize your experience with custom user settings."]
+        }
+      }
+    },
+    {
+      "appName": "Silent Moon",
+      "description": "Silent Moon is a mindfulness and exercise app where users can register, create a personalized profile, search and filter exercises, and receive tailored recommendations. Features include offline downloads, reminders, and notifications to keep users engaged and relaxed.",
+      "techStack": [
+        "ReactJS Vite",
+        "JavaScript",
+        "HTML5",
+        "Tailwind CSS",
+        "Node JS",
+        "Mongoose",
+        "Spotify API"
+      ],
+      "features": {
+        "current": {
+          "User Registration & Login": [
+            "Create an account with personalized settings.",
+            "Stay logged in or log in as a guest user.",
+            "Verify your registration via Email."
+          ],
+          "User Profile Management": [
+            "Specify skill level during registration.",
+            "Customize profile with profile picture and username.",
+            "Add, view, and remove favorite exercises."
+          ],
+          "Exercise Filtering & Search": [
+            "Filter exercises by level, category (Yoga, Meditation), and more.",
+            "Search exercises by name for quick access."
+          ],
+          "Curated Content": [
+            "Personalized exercise recommendations based on user level."
+          ],
+          "Exercise Interaction": [
+            "Download exercises for offline use.",
+            "Add exercises to a favorites list for easy access."
+          ],
+          "Notifications & Reminders": [
+            "Schedule and manage notifications for exercises.",
+            "Update notification settings in profile."
+          ]
+        },
+        "upcoming": {}
+      }
+    },
+    {
+      "appName": "PokeDex",
+      "description": "PokeDex lets you browse all Pokémon in a user-friendly interface. You can view all Pokémon in a grid, use the search bar to find specific Pokémon by name, and filter them by their elemental types. Clicking a Pokémon opens a detail page with full information including abilities, stats, and more.",
+      "contributors": ["Izel Acar", "Mia Mecklenburg", "Hakan Devit"],
+      "techStack": ["ReactJS Vite", "JavaScript", "HTML5", "CSS", "PokeAPI"],
+      "features": {
+        "current": {
+          "Homepage Display": [
+            "View all Pokémon in a grid layout.",
+            "Search bar to filter Pokémon by name."
+          ],
+          "Filter by Elements": [
+            "Dedicated filter page to filter Pokémon by their element/type (e.g., Fire, Water, Grass)."
+          ],
+          "Dynamic Detail Page": [
+            "Click on any Pokémon to see its detailed information.",
+            "Details include abilities, stats, and other relevant data."
+          ]
+        },
+        "upcoming": {}
+      }
+    }
+  ]
+}

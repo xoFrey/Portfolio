@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
+import projectsData from "../../data/projects.json";
 import "./Projects.css";
 
 const Projects = ({
@@ -12,6 +14,7 @@ const Projects = ({
   const [active, setActive] = useState(2);
   const [isClicked, setIsClicked] = useState(false);
   const itemsRef = useRef([]);
+  const projects = projectsData.apps;
 
   useEffect(() => {
     loadShow();
@@ -92,42 +95,62 @@ const Projects = ({
     <>
       <section className='projects-slider'>
         {url[projectIndex].map((item, index) => (
-          <>
-            <div
-              key={index}
-              className='item'
-              onClick={() => setIsClicked(!isClicked)}
-              ref={(elem) => (itemsRef.current[index] = elem)}>
-              <img
-                src={item}
-                alt={title}
-              />
-            </div>
-          </>
+          <div
+            key={index}
+            className='item'
+            onClick={() => setIsClicked(!isClicked)}
+            ref={(elem) => (itemsRef.current[index] = elem)}>
+            <img
+              src={item}
+              alt={title}
+            />
+          </div>
         ))}
         <div
           onClick={() => setIsClicked(!isClicked)}
           className={`image-back${isClicked ? "" : " invisible"}`}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-          repellat nulla natus ducimus vitae veritatis. Voluptates nobis amet
-          dignissimos
+          <div>
+            <h2>{projects[projectIndex].appName}</h2>
+          </div>
         </div>
 
-        <button
-          className='next'
+        <div
+          className='slide-arrows-right'
           onClick={handleNext}>
-          next
-        </button>
-        <button
-          className='prev'
+          <div className='next next-first'>
+            <SlArrowRight
+              fill='white'
+              size='40px'
+            />
+          </div>
+          <div className='next next-second'>
+            <SlArrowRight
+              fill='white'
+              size='40px'
+            />
+          </div>
+        </div>
+        <div
+          className='slide-arrows'
           onClick={handlePrev}>
-          prev
-        </button>
+          <div className='prev prev-first'>
+            <SlArrowLeft
+              fill='white'
+              size={"40px"}
+            />
+          </div>
+          <div className='prev prev-second'>
+            <SlArrowLeft
+              fill='white'
+              size={"40px"}
+            />
+          </div>
+        </div>
       </section>
       <div className='index-img'>
         {minis.map((url, index) => (
           <img
-            className={` mini-img`}
+            className={`${index === projectIndex ? "active" : ""} mini-img`}
             key={index}
             src={url}
             onClick={() => setProjectIndex(index)}

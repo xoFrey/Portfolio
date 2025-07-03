@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar = ({ aboutRef, homeRef, techStackRef }) => {
+const Navbar = ({ aboutRef, homeRef, techStackRef, slideShowRef }) => {
   return (
     <nav>
       <div className='logo-container'>
@@ -33,9 +33,6 @@ const Navbar = ({ aboutRef, homeRef, techStackRef }) => {
           </li>
 
           <li>
-            <Link to='/planets'>Journey</Link>
-          </li>
-          <li>
             <Link
               onClick={() =>
                 techStackRef.current?.scrollIntoView({ behavior: "smooth" })
@@ -44,7 +41,15 @@ const Navbar = ({ aboutRef, homeRef, techStackRef }) => {
             </Link>
           </li>
           <li>
-            <Link to='/projects'>Projects</Link>
+            <Link
+              onClick={() =>
+                slideShowRef.current?.scrollIntoView({ behavior: "smooth" })
+              }>
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link to='/planets'>Journey</Link>
           </li>
         </ul>
       </div>

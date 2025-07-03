@@ -25,25 +25,6 @@
   max-width: 100%;
 }
 
-.next,
-.prev {
-  position: absolute;
-  top: 40%;
-  color: white;
-  background-color: transparent;
-  font-size: xx-large;
-  font-weight: bold;
-  left: 50px;
-  border: 1px solid white;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.next {
-  left: unset;
-  right: 50px;
-}
-
 .image-back {
   background-color: white;
   width: 70vw;
@@ -61,4 +42,72 @@
 
 .invisible {
   display: none;
+}
+
+.slide-arrows {
+  cursor: pointer;
+}
+
+.next,
+.prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Left arrows */
+.prev-first {
+  animation: prev-movement 2s ease-in-out infinite;
+}
+
+.prev-second {
+  animation: prev-movement 2s 1s ease-in-out infinite;
+}
+
+/* Right arrows */
+.next-first {
+  animation: next-movement 2s ease-in-out infinite;
+}
+
+.next-second {
+  animation: next-movement 2s 1s ease-in-out infinite;
+}
+
+/* Left side animation */
+@keyframes prev-movement {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) translateX(15px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+/* Right side animation */
+@keyframes next-movement {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) translateX(-15px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50%) translateX(0);
+  }
 }
