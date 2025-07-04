@@ -105,7 +105,7 @@ const Projects = ({
             <p>{projects[projectIndex]?.description}</p>
             <div>
               <div className='techstack-info'>
-                <h4>Build With:</h4>
+                <h4>Tech:</h4>
                 {projects[projectIndex]?.techStack.map((item, index) => (
                   <ul
                     className='bulletpoints'
