@@ -7,33 +7,37 @@ const SlideShow = () => {
   const projects = {
     titles: ["MovieFlix", "Silent Moon", "Pokemon", "Tasty"],
     url: [
-      ["../Screenshot1.jpg", "../Screenshot2.jpg", "../Screenshot3.jpg"],
       [
-        "../Landingpage.png",
-        "../Login.png",
-        "../Home.png",
-        "../Yoga.png",
-        "../Spotify.png",
-        "../SpotifyPlayer.png",
-        "../Profile.png",
+        "../img/Screenshot1.jpg",
+        "../img/Screenshot2.jpg",
+        "../img/Screenshot3.jpg",
       ],
       [
-        "../HomeLight.png",
-        "../HomeDark.png",
-        "../SearchLight.png",
-        "../SearchDark.png",
-        "../DetailLight.png",
-        "../DetailDark.png",
+        "../img/Landingpage.png",
+        "../img/Login.png",
+        "../img/Home.png",
+        "../img/Yoga.png",
+        "../img/Spotify.png",
+        "../img/SpotifyPlayer.png",
+        "../img/Profile.png",
       ],
       [
-        "../loading.png",
-        "../starting.png",
-        "../tastyhome.png",
-        "../searchbar.png",
-        "../search.png",
-        "../instructions.png",
-        "../ingredients.png",
-        "../filter.png",
+        "../img/HomeLight.png",
+        "../img/HomeDark.png",
+        "../img/SearchLight.png",
+        "../img/SearchDark.png",
+        "../img/DetailLight.png",
+        "../img/DetailDark.png",
+      ],
+      [
+        "../img/loading.png",
+        "../img/starting.png",
+        "../img/tastyhome.png",
+        "../img/searchbar.png",
+        "../img/search.png",
+        "../img/instructions.png",
+        "../img/ingredients.png",
+        "../img/filter.png",
       ],
     ],
     github: [
@@ -45,10 +49,10 @@ const SlideShow = () => {
   };
 
   const minis = [
-    "../MovieFlix Logo.png",
-    "../SilentMoonLogo.png",
-    "../PokemonLogo.png",
-    "../TastyLogo.png",
+    "../img/MovieFlix Logo.png",
+    "../img/SilentMoonLogo.png",
+    "../img/PokemonLogo.png",
+    "../img/TastyLogo.png",
   ];
   console.log(projectIndex);
   return (
