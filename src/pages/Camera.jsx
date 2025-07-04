@@ -7,8 +7,6 @@ const Camera = () => {
   const { camera } = useThree();
   const scroll = useScroll();
 
-  console.log(camera.position);
-
   const curve = useMemo(() => {
     return new THREE.CatmullRomCurve3([
       new THREE.Vector3(0, -0, 5),

@@ -1,13 +1,7 @@
-import {
-  OrbitControls,
-  PerspectiveCamera,
-  PointMaterial,
-  Points,
-  useScroll,
-} from "@react-three/drei";
+import { PerspectiveCamera, PointMaterial, Points } from "@react-three/drei";
 import { useMemo, useRef } from "react";
 import * as random from "maath/random/dist/maath-random.esm";
-import { useFrame, useThree } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
 
 const Stars = ({ props }) => {
   const starRef = useRef();
@@ -25,7 +19,6 @@ const Stars = ({ props }) => {
     <group
       rotation={[0, 0, Math.PI / 4]}
       position={[0, 0, 0]}>
-      {/* <OrbitControls /> */}
       <Points
         ref={starRef}
         positions={sphere}

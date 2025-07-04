@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./LandingPage.css";
 import { Canvas } from "@react-three/fiber";
 import Stars from "../../components/Stars";
@@ -31,7 +31,7 @@ const LandingPage = () => {
         <section
           className='welcome'
           ref={homeRef}>
-          <h2>Welcome</h2>
+          <h2>Welcome to my Portfolio</h2>
           <div
             className='container'
             onClick={() =>

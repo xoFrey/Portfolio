@@ -1,14 +1,8 @@
-import { Canvas } from "@react-three/fiber";
-import Images from "./Images";
 import "./SlideShow.css";
-import Stars from "../../components/Stars";
-import { RiArrowLeftLine } from "react-icons/ri";
-import { useNavigate } from "react-router-dom";
 import Projects from "./Projects";
 import { useState } from "react";
 
 const SlideShow = () => {
-  const navigate = useNavigate();
   const [projectIndex, setProjectIndex] = useState(0);
   const projects = {
     titles: ["MovieFlix", "Silent Moon", "Pokemon", "Tasty"],
