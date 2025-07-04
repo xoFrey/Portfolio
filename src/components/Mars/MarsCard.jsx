@@ -1,4 +1,4 @@
-import { Html, Text, useScroll } from "@react-three/drei";
+import { Text, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useState } from "react";
 

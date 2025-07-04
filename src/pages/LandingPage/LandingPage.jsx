@@ -1,12 +1,11 @@
-import { Link } from "react-router-dom";
 import "./LandingPage.css";
+import { Link } from "react-router-dom";
 import { Canvas } from "@react-three/fiber";
 import Stars from "../../components/Stars";
-import { RiArrowRightSLine } from "react-icons/ri";
 import Navbar from "../../components/Navbar/Navbar";
 import { useRef } from "react";
+import { RiArrowRightSLine } from "react-icons/ri";
 import { SlArrowDown } from "react-icons/sl";
-
 import TechStack from "../../components/TechStack/TechStack";
 import SlideShow from "../SlideShow/SlideShow";
 

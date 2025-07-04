@@ -1,5 +1,4 @@
-import { Preload } from "@react-three/drei";
-import { useFrame, useLoader, useThree } from "@react-three/fiber";
+import { useFrame, useLoader } from "@react-three/fiber";
 import { useRef } from "react";
 import * as THREE from "three";
 
@@ -67,10 +66,6 @@ const Earth = () => {
           side={THREE.DoubleSide}
           specularMap={earthSpecular}
           bumpMap={earthBump}
-          // stencilWrite={true}
-          // stencilRef={1}
-          // stencilFunc={THREE.AlwaysStencilFunc}
-          // stencilZPass={THREE.ReplaceStencilOp}
         />
       </mesh>
       <mesh>

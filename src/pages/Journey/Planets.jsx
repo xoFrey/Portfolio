@@ -11,7 +11,6 @@ import { Canvas } from "@react-three/fiber";
 import { RiArrowLeftLine } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { OrbitControls } from "@react-three/drei";
 import JupiterCard from "../../components/Jupiter/JupiterCard";
 import SaturnCard from "../../components/Saturn/SaturnCard";
 
@@ -56,22 +55,18 @@ const Planets = () => {
               position={[3, 1, 1]}
               intensity={1}
             />
+            <Camera />
             <Stars />
             <Earth />
             <Mars />
             <Jupiter />
             <Saturn />
-            <Camera />
             <EarthCard />
             <MarsCard />
             <JupiterCard />
             <SaturnCard />
-            {/* <OrbitControls /> */}
           </ScrollControls>
-          <Preload
-            all
-            onProgress={() => console.log("Hallo")}
-          />
+          <Preload all />
         </Canvas>
       </>
     </div>

@@ -5,7 +5,6 @@ import * as THREE from "three";
 
 const TechStackComponent = ({ texture, position, name }) => {
   const meshRef = useRef();
-  const [hovered, setHovered] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
 
   useEffect(() => {
@@ -14,14 +13,6 @@ const TechStackComponent = ({ texture, position, name }) => {
       texture.needsUpdate = true;
     }
   }, [texture]);
-
-  const handleDown = () => {
-    setShowInfo(true);
-    console.log(showInfo);
-  };
-  const handleUp = () => {
-    setShowInfo(false);
-  };
 
   return (
     <group position={position}>

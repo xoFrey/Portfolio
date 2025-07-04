@@ -7,7 +7,6 @@ const SaturnCard = () => {
   const scroll = useScroll();
 
   useFrame(() => {
-    console.log(scroll.offset);
     if (scroll.offset >= 0.98 && scroll.offset <= 1) {
       setOpacity(50.25 * scroll.offset - 49.25);
     }

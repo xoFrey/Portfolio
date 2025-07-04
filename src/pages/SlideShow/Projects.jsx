@@ -31,15 +31,12 @@ const Projects = ({
     const items = itemsRef.current;
     if (!items || items.length === 0) return;
 
-    // Check if active index is valid
     if (active >= items.length || active < 0) return;
 
-    // Check if the active element exists
     if (!items[active]) return;
 
     let stt = 0;
 
-    // Active item - add null check
     if (items[active]) {
       items[active].style.transform = "none";
       items[active].style.zIndex = 1;
@@ -47,10 +44,8 @@ const Projects = ({
       items[active].style.opacity = 1;
     }
 
-    // Items after active
     for (let i = active + 1; i < items.length; i++) {
       if (items[i]) {
-        // Add null check
         stt++;
         items[i].style.transform = `translateX(${120 * stt}px) scale(${
           1 - 0.2 * stt
@@ -61,11 +56,9 @@ const Projects = ({
       }
     }
 
-    // Items before active
     stt = 0;
     for (let i = active - 1; i >= 0; i--) {
       if (items[i]) {
-        // Add null check
         stt++;
         items[i].style.transform = `translateX(${-120 * stt}px) scale(${
           1 - 0.2 * stt
@@ -88,8 +81,6 @@ const Projects = ({
     );
     setIsClicked(false);
   };
-
-  console.log(projectIndex);
 
   return (
     <>

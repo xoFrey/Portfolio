@@ -1,10 +1,4 @@
-import {
-  DragControls,
-  OrbitControls,
-  PresentationControls,
-  TransformControls,
-  useTexture,
-} from "@react-three/drei";
+import { useTexture } from "@react-three/drei";
 
 import TechStackComponent from "./TechStackComponent";
 

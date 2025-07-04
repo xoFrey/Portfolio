@@ -1,4 +1,4 @@
-import { Text, useHelper, useScroll } from "@react-three/drei";
+import { Text, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useState } from "react";
 const EarthCard = () => {
@@ -6,7 +6,6 @@ const EarthCard = () => {
   const [opacity, setOpacity] = useState(0);
 
   useFrame(() => {
-    // console.log(scroll.offset);
     // ! m = opacity/scroll.offset(end)-scroll.offset(start), opacity= m*scroll.offset(start)+b
     // ! b = opacity(1) - m*scroll.offset(start)
 

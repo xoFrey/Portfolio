@@ -1,5 +1,4 @@
-import { OrbitControls } from "@react-three/drei";
-import { useFrame, useLoader, useThree } from "@react-three/fiber";
+import { useFrame, useLoader } from "@react-three/fiber";
 import { useRef } from "react";
 import * as THREE from "three";
 
@@ -12,7 +11,6 @@ const Saturn = () => {
   const saturnRef = useRef();
   useFrame(() => {
     saturnRef.current.rotation.y += 0.001;
-    // saturnRef.current.rotation.x += 0.01;
   });
 
   return (
@@ -25,10 +23,6 @@ const Saturn = () => {
         <meshBasicMaterial
           map={saturnTexture}
           side={THREE.DoubleSide}
-          // stencilWrite={true}
-          // stencilRef={1}
-          // stencilFunc={THREE.AlwaysStencilFunc}
-          // stencilZPass={THREE.ReplaceStencilOp}
         />
       </mesh>
       <mesh rotation={[Math.PI / 2, 0, 0]}>
