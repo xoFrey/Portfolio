@@ -1,8 +1,8 @@
 <h1 align="center"><samp>Portfolio</samp> </h1>
 <p align="center"> 
-  <a href="https://github.com/xoFrey" target="_blank"> <img width="40" align="center" src="./Frontend/src/assets/img/github.png"/></a>
-  <a href="https://silentmoon.superprojekte.de" target="_blank"> <img width="45" align="center" src="./Frontend/src/assets/img/livepage.png"/></a>
-  <a href="https://www.linkedin.com/in/izelacar/" target="_blank"> <img width="40" align="center" src="./Frontend/src/assets/img/linkedin.png"/></a>
+  <a href="https://github.com/xoFrey" target="_blank"> <img width="40" align="center" src="./public/img/github.png"/></a>
+  <a href="https://silentmoon.superprojekte.de" target="_blank"> <img width="45" align="center" src="./public/img/livepage.png"/></a>
+  <a href="https://www.linkedin.com/in/izelacar/" target="_blank"> <img width="40" align="center" src="./public/img/linkedin.png"/></a>
 </p>
 
 
