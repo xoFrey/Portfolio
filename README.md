@@ -1,7 +1,7 @@
 <h1 align="center"><samp>Portfolio</samp> </h1>
 <p align="center"> 
   <a href="https://github.com/xoFrey" target="_blank" target="_blank" rel="noopener noreferrer"> <img width="40" align="center" src="./public/img/github.png"/></a>
-  <a href="https://portfolio.izel-acar.de" target="_blank" target="_blank" rel="noopener noreferrer"> <img width="45" align="center" src="./public/img/livepage.png"/></a>
+  <a href="https://portfolio.izel-acar.de" target="_blank" target="_blank" > <img width="45" align="center" src="./public/img/livepage.png"/></a>
   <a href="https://www.linkedin.com/in/izelacar/" target="_blank" target="_blank" rel="noopener noreferrer"> <img width="40" align="center" src="./public/img/linkedin.png"/></a>
 </p>
 
