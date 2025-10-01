@@ -25,7 +25,8 @@
     <li>
       <strong>About Me</strong>
       <ul>
-        <li>Little introduction about me.</li>
+        <li>Little introduction about me.</li>   
+        <li>3D Background with Stars.</li>
       </ul>
     </li>
     <li>
