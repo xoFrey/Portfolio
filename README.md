@@ -62,4 +62,21 @@
 <p align="center">
 <img  src="./public/img/screenshot-welcome.png"/>
 </p>
-
+<p align="center">
+<img  src="./public/img/screenshot-about.png"/>
+</p>
+<p align="center">
+<img  src="./public/img/screenshot-tech.png"/>
+</p>
+<p align="center">
+<img  src="./public/img/screenshot-slide.png"/>
+</p>
+<p align="center">
+<img  src="./public/img/screenshot-slideinfo.png"/>
+</p>
+<p align="center">
+<img  src="./public/img/screenshot-planet.png"/>
+</p>
+<p align="center">
+<img  src="./public/img/screenshot-planet1.png"/>
+</p>
