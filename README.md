@@ -1,8 +1,8 @@
 <h1 align="center"><samp>Portfolio</samp> </h1>
 <p align="center"> 
-  <a href="https://github.com/xoFrey" target="_blank"> <img width="40" align="center" src="./public/img/github.png"/></a>
-  <a href="https://silentmoon.superprojekte.de" target="_blank"> <img width="45" align="center" src="./public/img/livepage.png"/></a>
-  <a href="https://www.linkedin.com/in/izelacar/" target="_blank"> <img width="40" align="center" src="./public/img/linkedin.png"/></a>
+  <a href="https://github.com/xoFrey" target="_blank" target="_blank" rel="noopener noreferrer"> <img width="40" align="center" src="./public/img/github.png"/></a>
+  <a href="https://portfolio.izel-acar.de" target="_blank" target="_blank" > <img width="45" align="center" src="./public/img/livepage.png"/></a>
+  <a href="https://www.linkedin.com/in/izelacar/" target="_blank" target="_blank" rel="noopener noreferrer"> <img width="40" align="center" src="./public/img/linkedin.png"/></a>
 </p>
 
 
@@ -25,7 +25,8 @@
     <li>
       <strong>About Me</strong>
       <ul>
-        <li>Little introduction about me.</li>
+        <li>Little introduction about me.</li>   
+        <li>3D Background with Stars.</li>
       </ul>
     </li>
     <li>
@@ -55,7 +56,7 @@
 
 
 <h2><samp>Live site</samp></h2>
-<li><samp><a href="https://portfolio.izel-acar.de">Live Page</a></samp></li>
+<li><samp><a href="https://portfolio.izel-acar.de" target="_blank" rel="noopener noreferrer">Live Page</a></samp></li>
 
 <h2><samp>Screenshot</samp></h2>
 
