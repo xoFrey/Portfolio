@@ -155,12 +155,13 @@
   position: absolute;
   top: 3%;
   right: 3%;
-  animation: btnVisible 1.5s ease-in-out;
+  scale: 1.5;
 }
 
 .close-btn svg:hover {
   transform: rotateZ(90deg);
-  transition: all 0.3s ease-in-out;
+
+  transition: all 0.2s ease-in-out;
 }
 
 .blur {
@@ -179,15 +180,5 @@
 
   100% {
     transform: scale(1);
-  }
-}
-
-@keyframes btnVisible {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 100%;
   }
 }

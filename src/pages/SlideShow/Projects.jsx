@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 import projectsData from "../../data/projects.json";
 import "./Projects.css";
+import { IoCloseOutline } from "react-icons/io5";
+import { SiGithub } from "react-icons/si";
+import { Link } from "react-router-dom";
 
 const Projects = ({
   url,
@@ -97,11 +100,22 @@ const Projects = ({
             />
           </div>
         ))}
-        <div
-          onClick={() => setIsClicked(!isClicked)}
-          className={`image-back${isClicked ? "" : " invisible"}`}>
+        <div className={`image-back ${isClicked ? "" : " invisible"}`}>
           <div className='info-card'>
-            <h3>{projects[projectIndex]?.appName}</h3>
+            <div
+              className='close-btn'
+              onClick={() => setIsClicked(!isClicked)}>
+              <IoCloseOutline fill='white' />
+            </div>
+            <div className='info-card-title'>
+              <h3>{projects[projectIndex]?.appName}</h3>
+              <a
+                href={github[projectIndex]}
+                target='_blank'
+                rel='noopener noreferrer'>
+                <SiGithub />
+              </a>
+            </div>
             <p>{projects[projectIndex]?.description}</p>
             <div>
               <div className='techstack-info'>

@@ -44,10 +44,20 @@
 }
 
 /* ! Image Back Card Styling */
+.info-card-title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.info-card-title svg {
+  scale: 2;
+}
 .info-card {
   color: white;
   font-family: Jura;
   display: flex;
+  gap: 20px;
   align-items: center;
   flex-direction: column;
   line-height: 25px;
@@ -55,7 +65,6 @@
 
 .info-card h3 {
   font-size: 40px;
-  margin-bottom: 20px;
 }
 
 .info-card h4 {
