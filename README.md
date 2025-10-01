@@ -59,4 +59,7 @@
 <li><samp><a href="https://portfolio.izel-acar.de" target="_blank" rel="noopener noreferrer">Live Page</a></samp></li>
 
 <h2><samp>Screenshot</samp></h2>
+<p align="center">
+<img  src="./public/img/screenshot-welcome.png"/>
+</p>
 
